@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * A model that represents each author and contains a list of all book ISBN's written by them
+ * @author Alanna Morris
  */
 
 public class Author {

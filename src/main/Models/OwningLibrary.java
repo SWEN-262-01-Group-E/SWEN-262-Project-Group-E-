@@ -6,6 +6,7 @@ import java.util.HashMap;
  * A model that represents a library using the LMS.
  * The library will keep track of all visitors in a hashmap using their ID
  * and all books using their ISBN
+ * @author Alanna Morris
  */
 
 public class OwningLibrary {

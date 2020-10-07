@@ -3,6 +3,11 @@ package main.Models;
 
 import java.util.ArrayList;
 
+/**
+ * A model the represents a visitor to a library
+ *
+ * @author Joseph Saltalamacchia
+ */
 public class Visitor {
 
     private String firstName;
