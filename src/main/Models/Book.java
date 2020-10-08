@@ -1,5 +1,6 @@
 package main.Models;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Date;
  *
  * @author Joseph Saltalamacchia
  */
-public class Book {
+public class Book implements Serializable {
 
     private int ISBN;
     private String publisher;
@@ -121,6 +122,17 @@ public class Book {
         return copiesCheckedOut;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "ISBN=" + ISBN +
+                ", publisher='" + publisher + '\'' +
+                ", publishDate=" + publishDate +
+                ", totalPages=" + totalPages +
+                ", totalCopies=" + totalCopies +
+                ", copiesCheckedOut=" + copiesCheckedOut +
+                '}';
+    }
 
     //todo I left this commented out for now because I'm not sure if we want to set error states for invalid numbers of
     // check-ins and check-outs

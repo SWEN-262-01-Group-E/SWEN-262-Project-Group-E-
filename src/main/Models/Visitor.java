@@ -1,6 +1,7 @@
 package main.Models;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author Joseph Saltalamacchia
  */
-public class Visitor {
+public class Visitor implements Serializable {
 
     private String firstName;
     private String lastName;
@@ -151,6 +152,15 @@ public class Visitor {
         return(this.booksCheckedOut.remove(book));
     }
 
-
-
-  }
+    @Override
+    public String toString() {
+        return "Visitor{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", ID=" + ID +
+                ", booksCheckedOut=" + booksCheckedOut +
+                '}';
+    }
+}
