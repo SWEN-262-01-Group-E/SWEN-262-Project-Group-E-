@@ -148,6 +148,11 @@ public class Visitor {
      */
     public Boolean checkInBook(Book book)
     {
+        //TODO Determine Transaction needed by dates
+        // if returned on time
+        Transaction transaction = new Transaction(new ReturnedWithin7Days());
+        int cost = transaction.calculate();
+
         return(this.booksCheckedOut.remove(book));
     }
 
