@@ -1,4 +1,4 @@
-package main.Models;
+package main.Models.StrategyCostCalc;
 
 
 /**
@@ -8,7 +8,7 @@ package main.Models;
  * @author Alanna Morris
  */
 
-public class ReturnedWithin7Days implements TransactionCalculator{
+public class ReturnedWithin7Days implements TransactionCalculator {
     @Override
     public int calculateCost() {
         return 0;
