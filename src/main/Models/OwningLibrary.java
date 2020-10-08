@@ -1,6 +1,7 @@
 package main.Models;
 
 import java.util.HashMap;
+//TODO Make Book an entry class, so that # of copies and # of copies checked out are together
 
 /**
  * A model that represents a library using the LMS.
