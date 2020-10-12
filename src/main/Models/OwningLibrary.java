@@ -1,6 +1,8 @@
 package main.Models;
 
 import java.io.*;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -15,7 +17,7 @@ import java.util.Map;
 
 public class OwningLibrary {
 
-    private HashMap<Integer, Book> Inventory = new HashMap<Integer, Book> ();
+    private HashMap<Integer, LibraryEntry> Inventory = new HashMap<Integer, LibraryEntry> ();
     private HashMap<Integer, Visitor> Register = new HashMap<Integer, Visitor> ();
 
 
@@ -27,17 +29,17 @@ public class OwningLibrary {
         //Nothing is needed here
     }
 
-    public void addBook(Book book) {
+    public void addBook(Book book, int copies) {
         Integer ISBN = book.getISBN();
-        Inventory.put(ISBN, book);
+        LibraryEntry entry = new LibraryEntry(ISBN, copies);
+        Inventory.put(ISBN, entry);
     }
 
     public void addVisitor(Visitor visitor) {
         Integer ID = visitor.getID();
         Register.put(ID, visitor);
     }
-
-    @Override
+  @Override
     public String toString() {
         return "OwningLibrary{" +
                 "Inventory=" + Inventory.toString() +
@@ -93,6 +95,7 @@ public class OwningLibrary {
         }
     }
 
+  
     /**
      * A private helper method to read all of the saved Visitors from the file they were saved on
      */
@@ -182,4 +185,28 @@ public class OwningLibrary {
             System.out.println("Error initializing stream");
         }
     }
+}
+=======
+    public Boolean visitorCheckOut(Visitor visitor, Book book){
+        if (Inventory.containsKey(book.getISBN())) {
+            if (Inventory.get(book.getISBN()).canBeCheckedOut() && visitor.addCheckedOutBook(book)) {
+                Inventory.get(book.getISBN()).checkoutBook();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int visitorCheckIn(Visitor visitor, Book book) {
+        int cost = -1;
+        ArrayList<CheckedOut> allCheckouts = visitor.getCheckouts();
+        for (CheckedOut checkedOut: allCheckouts) {
+            if (checkedOut.getISBN() == book.getISBN()) {
+                Inventory.get(book.getISBN()).checkinBook();
+                cost = visitor.checkInBook(checkedOut);
+            }
+        }
+        return cost;
+    }
+
 }

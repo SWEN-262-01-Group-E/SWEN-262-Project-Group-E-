@@ -2,7 +2,15 @@ package main.Models;
 
 
 import java.io.Serializable;
+
+import main.Models.StateCheckOut.ableToCheckOut;
+import main.Models.StateCheckOut.checkOutState;
+import main.Models.StateCheckOut.unableToCheckOut;
+import main.Models.StrategyCostCalc.*;
+
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A model the represents a visitor to a library
@@ -136,21 +144,51 @@ public class Visitor implements Serializable {
      */
     public Boolean addCheckedOutBook(Book book)
     {
+        checkOutState stateCheckOut = new checkOutState();
         if(this.booksCheckedOut.size() < 5) {
-            return this.booksCheckedOut.add(book);
+            this.booksCheckedOut.add(book);
+            ableToCheckOut ableTo = new ableToCheckOut();
+            return ableTo.canCheckOut(stateCheckOut);
+        } else {
+            unableToCheckOut unableTo = new unableToCheckOut();
+            return unableTo.canCheckOut(stateCheckOut);
         }
-        return false;
     }
 
     /**
      * removes a book from the list of books the visitor currently has checked out
-     * @param book the book being checked in
+     * @param checkedOut: the book being checked in
      * @return if the book was successfully removed from the list of books checked out.
      */
-    public Boolean checkInBook(Book book)
-    {
-        return(this.booksCheckedOut.remove(book));
+    public int checkInBook(CheckedOut checkedOut) {
+        Date today = new Date(0);
+        int cost;
+        long difference;
+        long differenceInDays;
+
+        difference = Math.abs(today.getTime() - checkedOut.getDueDate().getTime());
+        differenceInDays = TimeUnit.DAYS.convert(difference, TimeUnit.MILLISECONDS);
+
+        if (differenceInDays <= 7) {
+            Transaction transaction = new Transaction(new ReturnedWithin7Days());
+            cost = transaction.calculate(checkedOut);
+        } else if (differenceInDays <= 14) {
+            Transaction transaction = new Transaction(new Returned1WeekLate());
+            cost = transaction.calculate(checkedOut);
+        } else if (differenceInDays <= 77) {
+            Transaction transaction = new Transaction(new Returned2To11WeeksLate());
+            cost = transaction.calculate(checkedOut);
+        } else {
+            Transaction transaction = new Transaction(new Returned12OrMoreWeeksLate());
+            cost = transaction.calculate(checkedOut);
+        }
+
+        this.totalFines += cost;
+        this.booksCheckedOut.remove(checkedOut);
+        return cost;
+
     }
+
 
     @Override
     public String toString() {
@@ -163,4 +201,5 @@ public class Visitor implements Serializable {
                 ", booksCheckedOut=" + booksCheckedOut +
                 '}';
     }
+
 }
