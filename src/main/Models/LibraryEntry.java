@@ -1,10 +1,12 @@
 package main.Models;
 
+import java.io.Serializable;
+
 /**
  * Book class with # of available copies and # of checked out copies
  */
 
-public class LibraryEntry {
+public class LibraryEntry implements Serializable {
 
     private int ISBN;
     private int totalCopies;
@@ -42,5 +44,14 @@ public class LibraryEntry {
 
     public int getISBN(){
         return ISBN;
+    }
+
+    @Override
+    public String toString() {
+        return "LibraryEntry{" +
+                "ISBN=" + ISBN +
+                ", totalCopies=" + totalCopies +
+                ", copiesCheckedOut=" + copiesCheckedOut +
+                '}';
     }
 }

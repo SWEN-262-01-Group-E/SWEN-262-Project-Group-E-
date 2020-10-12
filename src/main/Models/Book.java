@@ -14,6 +14,8 @@ public class Book implements Serializable {
     private String publisher;
     private Date publishDate;
     private int totalPages;
+    private int totalCopies;
+    private int copiesCheckedOut;
 
     /**
      * Creates a new Book object with a valid ISBN, publisher, date of publish, total number of pages, and total number of copies
@@ -24,11 +26,13 @@ public class Book implements Serializable {
      * @param totalPages  The total number of pages in a given copy of this book
      */
     //todo we should probably check that all of these values are valid
-    public Book(int ISBN, String publisher, Date publishDate, int totalPages) {
+    public Book(int ISBN, String publisher, Date publishDate, int totalPages, int totalCopies) {
         this.ISBN = ISBN;
         this.publisher = publisher;
         this.publishDate = publishDate;
         this.totalPages = totalPages;
+        this.totalCopies = totalCopies;
+        this.copiesCheckedOut = 0;
     }
 
     /**

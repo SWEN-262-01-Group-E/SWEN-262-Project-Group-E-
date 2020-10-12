@@ -19,6 +19,9 @@ public class LibraryServer {
 
     public static void main(String[] args) {
 
+        HashMap<Integer, Book> allBooks = new HashMap<Integer, Book>();
+
+        //opens the library
         library = new OwningLibrary();
 
         library.openLibrary();
@@ -31,9 +34,9 @@ public class LibraryServer {
                     ArrayList<String> arguments = splitCSV(reader.nextLine());
 
                     Book b = new Book(Integer.parseInt(arguments.get(0)),arguments.get(3),
-                            new Date(arguments.get(4)), 0, 0);
+                            new Date(arguments.get(4)), 0, 1);
 
-                    library.addBook(b);
+                    allBooks.put(b.getISBN(), b);
                 }
             }
             catch (FileNotFoundException e) {

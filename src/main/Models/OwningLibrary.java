@@ -76,9 +76,8 @@ public class OwningLibrary {
             boolean keepReading = true;
             try{
                 while(keepReading){
-                    Book book = (Book) oBook.readObject();
+                    LibraryEntry book = (LibraryEntry) oBook.readObject();
                     this.Inventory.put(book.getISBN(), book);
-                    // oBook = new ObjectInputStream(fBook);
                 }
             }catch (EOFException ignored){
             }
@@ -140,7 +139,7 @@ public class OwningLibrary {
             //print each visitor to the file
             while(BookIterator.hasNext()){
                 Map.Entry pair = (Map.Entry) BookIterator.next();
-                Book b = (Book) pair.getValue();
+                LibraryEntry b = (LibraryEntry) pair.getValue();
 
                 oBook.writeObject(b);
                 System.out.println(b.toString());
@@ -185,8 +184,8 @@ public class OwningLibrary {
             System.out.println("Error initializing stream");
         }
     }
-}
-=======
+
+
     public Boolean visitorCheckOut(Visitor visitor, Book book){
         if (Inventory.containsKey(book.getISBN())) {
             if (Inventory.get(book.getISBN()).canBeCheckedOut() && visitor.addCheckedOutBook(book)) {
@@ -197,7 +196,7 @@ public class OwningLibrary {
         return false;
     }
 
-    public int visitorCheckIn(Visitor visitor, Book book) {
+    /*public int visitorCheckIn(Visitor visitor, Book book) {
         int cost = -1;
         ArrayList<CheckedOut> allCheckouts = visitor.getCheckouts();
         for (CheckedOut checkedOut: allCheckouts) {
@@ -207,6 +206,6 @@ public class OwningLibrary {
             }
         }
         return cost;
-    }
+    }*/
 
 }
