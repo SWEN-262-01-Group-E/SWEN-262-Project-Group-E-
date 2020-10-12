@@ -4,14 +4,16 @@ import main.Models.Book;
 import main.Models.OwningLibrary;
 import main.Models.Visitor;
 
-import java.util.Date;
+import java.io.FileReader;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LibraryServer {
 
     private static OwningLibrary library;
 
     public static void main(String[] args) {
-
         library = new OwningLibrary();
 
         StringBuilder commandBuilder = new StringBuilder();
@@ -20,7 +22,7 @@ public class LibraryServer {
         do {
             do {
                 System.out.print("Enter commands >");
-                commandBuilder.append(commandScanner.next());
+                commandBuilder.append(commandScanner.nextLine());
             } while(!commandBuilder.toString().endsWith(";"));
             for(String command : commandBuilder.toString().split(";")) {
 
@@ -29,16 +31,35 @@ public class LibraryServer {
                     break;
                 }
                 else if(command.length() > 0) {
-                    String[] arguments = command.split(",");
-                    switch(arguments[0]) {
+                    ArrayList<String> arguments = new ArrayList<String>();
+
+                    //This could include matches with curly brackets within curly brackets. Filter them out and add them
+                    Pattern curlyBrackets = Pattern.compile("\\{(.*?)},");
+                    Matcher matcher = curlyBrackets.matcher(command);
+                    while(matcher.find()) {
+                        String s = matcher.group();
+                        String substring = s.substring(1, s.length() - 3);
+
+                        if(substring.contains("{") || substring.contains("}")) continue;
+
+                        arguments.add(substring);
+                        command = command.replace(s, "");
+                    }
+
+                    //Add remaining arguments
+                    for(String s : command.split(",")) {
+                        arguments.add(s);
+                    }
+
+                    switch(arguments.get(0)) {
                         default:
                             break;
                         case "command":
                             //Check arguments and call method method for that command
                             //Example:
                             /*
-                                if(arguments.length() == 3)
-                                    command_method(argument[1], argument[2])
+                                if(arguments.size() == 3)
+                                    command_method(arguments.get(1), arguments.get(2))
                             */
                             //Could also parse integers and check those
                             break;
