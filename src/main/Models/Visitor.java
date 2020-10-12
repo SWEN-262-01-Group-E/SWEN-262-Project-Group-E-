@@ -1,6 +1,9 @@
 package main.Models;
 
 
+import main.Models.StateCheckOut.ableToCheckOut;
+import main.Models.StateCheckOut.checkOutState;
+import main.Models.StateCheckOut.unableToCheckOut;
 import main.Models.StrategyCostCalc.*;
 
 import java.util.ArrayList;
@@ -139,10 +142,15 @@ public class Visitor {
      */
     public Boolean addCheckedOutBook(Book book)
     {
+        checkOutState stateCheckOut = new checkOutState();
         if(this.booksCheckedOut.size() < 5) {
-            return this.booksCheckedOut.add(book);
+            this.booksCheckedOut.add(book);
+            ableToCheckOut ableTo = new ableToCheckOut();
+            return ableTo.canCheckOut(stateCheckOut);
+        } else {
+            unableToCheckOut unableTo = new unableToCheckOut();
+            return unableTo.canCheckOut(stateCheckOut);
         }
-        return false;
     }
 
     /**
