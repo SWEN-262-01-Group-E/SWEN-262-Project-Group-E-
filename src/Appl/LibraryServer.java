@@ -14,6 +14,8 @@ public class LibraryServer {
 
         library = new OwningLibrary();
 
+
+        System.out.println("IT WORKS");
         //used to test that the system worked
         //testPersistence(library);
 
