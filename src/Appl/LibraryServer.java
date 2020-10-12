@@ -4,6 +4,8 @@ import main.Models.Book;
 import main.Models.OwningLibrary;
 import main.Models.Visitor;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -15,6 +17,28 @@ public class LibraryServer {
 
     public static void main(String[] args) {
         library = new OwningLibrary();
+
+        if(args.length == 1) {
+            try {
+                Scanner reader = new Scanner(new File(args[0]));
+                while(reader.hasNextLine())
+                {
+                    ArrayList<String> arguments = splitCSV(reader.nextLine());
+
+                    Book b = new Book(Integer.parseInt(arguments.get(0)),arguments.get(3),
+                            new Date(arguments.get(4)), 0, 0);
+
+                    library.addBook(b);
+                }
+            }
+            catch (FileNotFoundException e) {
+                System.out.println(e);
+            }
+        }
+
+
+
+
 
         StringBuilder commandBuilder = new StringBuilder();
         Scanner commandScanner = new Scanner(System.in);
@@ -31,25 +55,8 @@ public class LibraryServer {
                     break;
                 }
                 else if(command.length() > 0) {
-                    ArrayList<String> arguments = new ArrayList<String>();
 
-                    //This could include matches with curly brackets within curly brackets. Filter them out and add them
-                    Pattern curlyBrackets = Pattern.compile("\\{(.*?)},");
-                    Matcher matcher = curlyBrackets.matcher(command);
-                    while(matcher.find()) {
-                        String s = matcher.group();
-                        String substring = s.substring(1, s.length() - 3);
-
-                        if(substring.contains("{") || substring.contains("}")) continue;
-
-                        arguments.add(substring);
-                        command = command.replace(s, "");
-                    }
-
-                    //Add remaining arguments
-                    for(String s : command.split(",")) {
-                        arguments.add(s);
-                    }
+                    ArrayList<String> arguments = splitCSV(command);
 
                     switch(arguments.get(0)) {
                         default:
@@ -70,12 +77,36 @@ public class LibraryServer {
         } while(isRunning);
 
         //Save Library
-        //End Appllication
+        //End Application
 
         System.out.println("IT WORKS");
         //used to test that the system worked
         //testPersistence(library);
 
+    }
+
+    private static ArrayList<String> splitCSV(String masterString) {
+        ArrayList<String> arguments = new ArrayList<String>();
+
+        //This could include matches with curly brackets within curly brackets. Filter them out and add them
+        Pattern curlyBrackets = Pattern.compile("\\{(.*?)},");
+        Matcher matcher = curlyBrackets.matcher(masterString);
+        while(matcher.find()) {
+            String s = matcher.group();
+            String substring = s.substring(1, s.length() - 3);
+
+            if(substring.contains("{") || substring.contains("}")) continue;
+
+            arguments.add(substring);
+            masterString = masterString.replace(s, "");
+        }
+
+        //Add remaining arguments
+        for(String s : masterString.split(",")) {
+            arguments.add(s);
+        }
+
+        return arguments;
     }
 
 
