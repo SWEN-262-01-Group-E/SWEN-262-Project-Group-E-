@@ -14,6 +14,42 @@ public class LibraryServer {
 
         library = new OwningLibrary();
 
+        StringBuilder commandBuilder = new StringBuilder();
+        Scanner commandScanner = new Scanner(System.in);
+        Boolean isRunning = true;
+        do {
+            do {
+                System.out.print("Enter commands >");
+                commandBuilder.append(commandScanner.next());
+            } while(!commandBuilder.toString().endsWith(";"));
+            for(String command : commandBuilder.toString().split(";")) {
+
+                if(command.equals("quit")) {
+                    isRunning = false;
+                    break;
+                }
+                else if(command.length() > 0) {
+                    String[] arguments = command.split(",");
+                    switch(arguments[0]) {
+                        default:
+                            break;
+                        case "command":
+                            //Check arguments and call method method for that command
+                            //Example:
+                            /*
+                                if(arguments.length() == 3)
+                                    command_method(argument[1], argument[2])
+                            */
+                            //Could also parse integers and check those
+                            break;
+                    }
+                }
+
+            }
+        } while(isRunning);
+
+        //Save Library
+        //End Appllication
 
         System.out.println("IT WORKS");
         //used to test that the system worked
