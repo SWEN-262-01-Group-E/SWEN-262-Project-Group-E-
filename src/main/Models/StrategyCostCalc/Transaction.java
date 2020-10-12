@@ -1,6 +1,8 @@
 package main.Models.StrategyCostCalc;
 
 
+import main.Models.CheckedOut;
+
 /**
  * Uses the TransactionCalculator to complete the cost calculation
  * Strategy Pattern Context Class
@@ -15,8 +17,8 @@ public class Transaction {
         this.transactionCalculator = transactionCalculator;
     }
 
-    public int calculate() {
-        return transactionCalculator.calculateCost();
+    public int calculate(CheckedOut checkedOut) {
+        return transactionCalculator.calculateCost(checkedOut);
     }
 
 }

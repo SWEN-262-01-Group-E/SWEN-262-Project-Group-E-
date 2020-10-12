@@ -1,5 +1,6 @@
 package main.Models.StrategyCostCalc;
 
+import main.Models.CheckedOut;
 
 /**
  * Interface used to calculate the transaction
@@ -7,5 +8,5 @@ package main.Models.StrategyCostCalc;
  */
 
 public interface TransactionCalculator {
-    public int calculateCost();
+    public int calculateCost(CheckedOut checkedout);
 }

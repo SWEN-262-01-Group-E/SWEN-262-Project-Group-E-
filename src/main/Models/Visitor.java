@@ -1,7 +1,11 @@
 package main.Models;
 
 
+import main.Models.StrategyCostCalc.*;
+
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A model the represents a visitor to a library
@@ -15,8 +19,8 @@ public class Visitor {
     private String address;
     private int phoneNumber;  //TODO:do we want this to be a string or an integer?
     private int ID;
-    private ArrayList<Book> booksCheckedOut;  //this structure means that the first copy of a
-    private double totalFines;   //TODO this can probably be removed and replaced with a class that calculates the value
+    private ArrayList<CheckedOut> booksCheckedOut;  //this structure means that the first copy of a
+    private int totalFines;
 
     /**
      * A constructor to create a new Visitor, using the first name, last name, address, phone number, and ID
@@ -26,7 +30,7 @@ public class Visitor {
      * @param address  The address of the visitor
      * @param phoneNumber  The phone number of the visitor
      * @param ID  The unique ID number of the visitor
-     */
+
     public Visitor(String firstName, String lastName, String address, int phoneNumber, int ID) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,6 +38,7 @@ public class Visitor {
         this.phoneNumber = phoneNumber;
         this.ID = ID;
     }
+    **/
 
     /**
      * A constructor to create a new Visitor, using the first name, last name, address, phone number, ID, and list of books Checked out
@@ -43,9 +48,9 @@ public class Visitor {
      * @param address  The address of the visitor
      * @param phoneNumber  The phone number of the visitor
      * @param ID  The unique ID number of the visitor
-     * @param booksCheckedOut A list of books currently checked out by the visitor, organized by the book's ISBN
+     * @param booksCheckedOut A list of currenty checked out books by the visitor, organized by the book's ISBN
      */
-    public Visitor(String firstName, String lastName, String address, int phoneNumber, int ID, ArrayList<Book> booksCheckedOut) {
+    public Visitor(String firstName, String lastName, String address, int phoneNumber, int ID, ArrayList<CheckedOut> booksCheckedOut) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -128,6 +133,10 @@ public class Visitor {
 
     //there is no "set" method for the ID because it should never change.
 
+    public int getTotalFines() {
+        return totalFines;
+    }
+
     /**
      * adds a book to the list of books the visitor currently has checked out
      * @param book the book being checked out
@@ -136,24 +145,54 @@ public class Visitor {
     public Boolean addCheckedOutBook(Book book)
     {
         if(this.booksCheckedOut.size() < 5) {
-            return this.booksCheckedOut.add(book);
+            int ISBN = book.getISBN();
+            Date CheckoutDate = new Date();
+            CheckedOut checkout = new CheckedOut(ISBN, this.ID, CheckoutDate);
+            this.booksCheckedOut.add(checkout);
+            return true;
         }
         return false;
     }
 
+    public ArrayList<CheckedOut> getCheckouts() {
+        return this.booksCheckedOut;
+    }
+
     /**
      * removes a book from the list of books the visitor currently has checked out
-     * @param book the book being checked in
+     * and uses the strategy pattern to calculate a fine (context)
+     * @param checkedOut the book being checked in
      * @return if the book was successfully removed from the list of books checked out.
      */
-    public Boolean checkInBook(Book book)
-    {
-        //TODO Determine Transaction needed by dates
-        //if returned on time
-        Transaction transaction = new Transaction(new ReturnedWithin7Days());
-        int cost = transaction.calculate();
+    public int checkInBook(CheckedOut checkedOut) {
+        Date today = new Date(0);
+        int cost;
+        long difference;
+        long differenceInDays;
 
-        return(this.booksCheckedOut.remove(book));
+        difference = Math.abs(today.getTime() - checkedOut.getDueDate().getTime());
+        differenceInDays = TimeUnit.DAYS.convert(difference, TimeUnit.MILLISECONDS);
+
+        if (differenceInDays <= 7) {
+            Transaction transaction = new Transaction(new ReturnedWithin7Days());
+            cost = transaction.calculate(checkedOut);
+        } else if (differenceInDays <= 14) {
+            Transaction transaction = new Transaction(new Returned1WeekLate());
+            cost = transaction.calculate(checkedOut);
+        } else if (differenceInDays <= 77) {
+            Transaction transaction = new Transaction(new Returned2To11WeeksLate());
+            cost = transaction.calculate(checkedOut);
+        } else {
+            Transaction transaction = new Transaction(new Returned12OrMoreWeeksLate());
+            cost = transaction.calculate(checkedOut);
+        }
+
+        this.totalFines += cost;
+        this.booksCheckedOut.remove(checkedOut);
+        return cost;
+
     }
+
+
 
   }

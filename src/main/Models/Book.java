@@ -13,8 +13,6 @@ public class Book {
     private String publisher;
     private Date publishDate;
     private int totalPages;
-    private int totalCopies;
-    private int copiesCheckedOut;
 
     /**
      * Creates a new Book object with a valid ISBN, publisher, date of publish, total number of pages, and total number of copies
@@ -23,16 +21,13 @@ public class Book {
      * @param publisher The publisher of this book
      * @param publishDate The date this book was published
      * @param totalPages  The total number of pages in a given copy of this book
-     * @param totalCopies The total number of copies of this book in the library Management System
      */
     //todo we should probably check that all of these values are valid
-    public Book(int ISBN, String publisher, Date publishDate, int totalPages, int totalCopies) {
+    public Book(int ISBN, String publisher, Date publishDate, int totalPages) {
         this.ISBN = ISBN;
         this.publisher = publisher;
         this.publishDate = publishDate;
         this.totalPages = totalPages;
-        this.totalCopies = totalCopies;
-        copiesCheckedOut = 0;
     }
 
     /**
@@ -81,87 +76,4 @@ public class Book {
 
     //there is no "set" method for the publish date because it should never change
 
-    /**
-     * returns the total number of copies of this book in the database
-     * @return the total number of copies of this book in the database
-     */
-    public int getTotalCopies() {
-        return totalCopies;
-    }
-
-    /**
-     * Adds a specified number of copies of this book.
-     * @param numberOfNewCopies the number of books to be added. Any numbers below zero are treated as zero
-     * @return the new total number of copies
-     */
-    public int addCopies(int numberOfNewCopies) {
-        if(numberOfNewCopies >= 0){
-            this.totalCopies += numberOfNewCopies;
-        }
-        return this.totalCopies;
-    }
-
-    /**
-     * removes a specified number of copies of this book.
-     * @param numberOfCopies the number of books to be removed. Any numbers below zero are treated as zero
-     * @return the new total number of copies
-     */
-    public int removeCopies(int numberOfCopies) {
-        if(numberOfCopies >= 0 && numberOfCopies <= totalCopies){
-            this.totalCopies -= numberOfCopies;
-        }
-        return this.totalCopies;
-    }
-
-    /**
-     * returns the number of copies of this book currently checked out
-     * @return the number of copies of this book currently checked out
-     */
-    public int getCopiesCheckedOut() {
-        return copiesCheckedOut;
-    }
-
-
-    //todo I left this commented out for now because I'm not sure if we want to set error states for invalid numbers of
-    // check-ins and check-outs
-
-  /*  *//**
-     * Check out additional copies of this book
-     * @param numberOfCopies the number of copies of this book to be checked out. Numbers lower than zero are treated as
-     *                       zero, numbers that, when added to the current number of books checked out, are greater than
-     *                       the current total number of books are treated as being equal to the current total number of books
-     * @return The current number of books checked out.
-     *//*
-    public int checkOut(int numberOfCopies){
-        //if the number of copies attempting to be checked out if greater than the number of copies available, only
-        // check out up to the number of copies available
-        if((numberOfCopies + this.copiesCheckedOut) >= this.totalCopies){
-            this.copiesCheckedOut = this.totalCopies;
-        }
-        if(numberOfCopies > 0 ){
-            this.copiesCheckedOut += numberOfCopies;
-        }
-        return this.copiesCheckedOut;
-
-    }
-
-    *//**
-     * Check in additional copies of this book
-     * @param numberOfCopies the number of copies of this book to be checked in. Numbers lower than zero are treated as
-     *                       zero, numbers greater than the total number of books currently checked out are treated as
-     *                       being equal to the current total number of books checked out
-     * @return The current number of books checked out.
-     *//*
-    public int checkIn(int numberOfCopies){
-        //if the number of copies attempting to be checked in if greater than the number of copies currently checked out,
-        // only check in up to the number of copies currently checked out
-        if(numberOfCopies >= this.copiesCheckedOut){
-            this.copiesCheckedOut = 0;
-        }
-        if(numberOfCopies > 0 ){
-            this.copiesCheckedOut -= numberOfCopies;
-        }
-        return this.copiesCheckedOut;
-
-    }*/
 }
