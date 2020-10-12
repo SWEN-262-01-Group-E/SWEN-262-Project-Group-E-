@@ -10,13 +10,18 @@ import java.io.FileReader;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Date;
+import java.util.Scanner;
 
 public class LibraryServer {
 
     private static OwningLibrary library;
 
     public static void main(String[] args) {
+
         library = new OwningLibrary();
+
+        library.openLibrary();
 
         if(args.length == 1) {
             try {
@@ -36,10 +41,6 @@ public class LibraryServer {
             }
         }
 
-
-
-
-
         StringBuilder commandBuilder = new StringBuilder();
         Scanner commandScanner = new Scanner(System.in);
         Boolean isRunning = true;
@@ -50,6 +51,7 @@ public class LibraryServer {
             } while(!commandBuilder.toString().endsWith(";"));
             for(String command : commandBuilder.toString().split(";")) {
 
+                System.out.println(commandBuilder.toString());
                 if(command.equals("quit")) {
                     isRunning = false;
                     break;
@@ -78,6 +80,7 @@ public class LibraryServer {
 
         //Save Library
         //End Application
+        library.closeLibrary();
 
         System.out.println("IT WORKS");
         //used to test that the system worked

@@ -76,7 +76,7 @@ public class OwningLibrary {
                 while(keepReading){
                     Book book = (Book) oBook.readObject();
                     this.Inventory.put(book.getISBN(), book);
-                   // oBook = new ObjectInputStream(fBook);
+                    // oBook = new ObjectInputStream(fBook);
                 }
             }catch (EOFException ignored){
             }
@@ -106,7 +106,7 @@ public class OwningLibrary {
                 while(keepReading){
                     Visitor visitor = (Visitor) oVisitor.readObject();
                     this.Register.put(visitor.getID(), visitor);
-                   // oVisitor = new ObjectInputStream(fVisitor);
+                    // oVisitor = new ObjectInputStream(fVisitor);
                 }
             }catch (EOFException ignored){
             }
