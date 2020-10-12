@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="Trying to fix the nobody running things thing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextFiles/BookLog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TextFiles/BookLog.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextFiles/VisitorLog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TextFiles/VisitorLog.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="testbranch2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\hatte\IdeaProjects\SWEN-262-Project-Group-E-\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hHWKUEF6F4ZIhHJB5VX84U1RGw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="13" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="LibraryServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Appl.LibraryServer" />
+      <module name="SWEN-262-Project-Group-E-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Appl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="SWEN-262-Project-Group-E-2" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="SWEN-262-Project-Group-E-2" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.LibraryServer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="" />
+      <created>1599668433301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599668433301</updated>
+      <workItem from="1599668440571" duration="803000" />
+      <workItem from="1601857668930" duration="902000" />
+      <workItem from="1601858588070" duration="26000" />
+      <workItem from="1601858625614" duration="1980000" />
+      <workItem from="1601860628006" duration="2335000" />
+      <workItem from="1601989331770" duration="2072000" />
+      <workItem from="1602031658247" duration="4000" />
+      <workItem from="1602031762254" duration="1408000" />
+      <workItem from="1602129581977" duration="8409000" />
+      <workItem from="1602193884475" duration="2000000" />
+      <workItem from="1602389366143" duration="12402000" />
+      <workItem from="1602476091422" duration="577000" />
+      <workItem from="1602478405586" duration="219000" />
+      <workItem from="1602478641587" duration="117000" />
+      <workItem from="1602478841930" duration="1572000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added name to README.md">
+      <created>1599668594247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599668594247</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added name to README.md">
+      <created>1599668630827</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599668630827</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added the beginings of the Visitor and Book model classes">
+      <created>1601862779057</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601862779057</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added some comments I missed">
+      <created>1602032483158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602032483158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added the ability to save all visitors and Books to a file upon shutdown, and read them back in on startup">
+      <created>1602135119324</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602135119324</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added BookLog.bin and VisitorLog.bin to avoid first time crash">
+      <created>1602474649183</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602474649183</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added Generic request model to facilitate organizing requests">
+      <created>1602474782346</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602474782346</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Trying to fix the nobody running things thing">
+      <created>1602475374439</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602475374439</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Trying to fix the nobody running things thing">
+      <created>1602476029378</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602476029378</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Trying to fix the nobody running things thing">
+      <created>1602476506412</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602476506412</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Trying to fix the nobody running things thing">
+      <created>1602479022547</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602479022547</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Trying to fix the nobody running things thing">
+      <created>1602479147380</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602479147380</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Trying to fix the nobody running things thing">
+      <created>1602479182042</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602479182042</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Preparing to merge back into Models branch">
+      <created>1602542125307</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602542125307</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added name to README.md" />
+    <MESSAGE value="Added the beginings of the Visitor and Book model classes" />
+    <MESSAGE value="Added some comments I missed" />
+    <MESSAGE value="Added the ability to save all visitors and Books to a file upon shutdown, and read them back in on startup" />
+    <MESSAGE value="Added BookLog.bin and VisitorLog.bin to avoid first time crash" />
+    <MESSAGE value="Added Generic request model to facilitate organizing requests" />
+    <MESSAGE value="Trying to fix the nobody running things thing" />
+    <MESSAGE value="Preparing to merge back into Models branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparing to merge back into Models branch" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="206" y="193" key="#LibraryServer" timestamp="1602478978220">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="206" y="193" key="#LibraryServer/0.0.1920.1040@0.0.1920.1040" timestamp="1602478978220" />
+    <state x="320" y="110" key="#Project_Structure" timestamp="1602480782920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="320" y="110" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1602480782920" />
+    <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602480806583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602480806583" />
+    <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602133606734">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1602544108484">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602544108484" />
+    <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601858187209">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601858187209" />
+    <state x="326" y="133" key="CommitChangelistDialog2" timestamp="1602542124040">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="326" y="133" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542124040" />
+    <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
+    <state width="1877" height="135" key="GridCell.Tab.0.bottom" timestamp="1602544527229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="135" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527229" />
+    <state width="1877" height="135" key="GridCell.Tab.0.center" timestamp="1602544527228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="135" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527228" />
+    <state width="1877" height="135" key="GridCell.Tab.0.left" timestamp="1602544527228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="135" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527228" />
+    <state width="1877" height="135" key="GridCell.Tab.0.right" timestamp="1602544527228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="135" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527228" />
+    <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="188" y="16" width="1714" height="1016" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602541838921" />
+    <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1602541838927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602541838927" />
+    <state x="1067" y="229" key="NewModule_or_Project.wizard" timestamp="1602480665216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1067" y="229" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602480665216" />
+    <state x="246" y="63" key="SettingsEditor" timestamp="1602480675128">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="246" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602480675128" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1602542129095">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542129095" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602542663245">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542663245" />
+    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602480435806">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602480435806" />
+    <state x="151" y="105" key="new project wizard" timestamp="1602480613032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="151" y="105" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602480613032" />
+    <state x="199" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1602130755732">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="199" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602130755732" />
+  </component>
+</project>

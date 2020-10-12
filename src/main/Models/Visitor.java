@@ -1,6 +1,8 @@
 package main.Models;
 
 
+import java.io.Serializable;
+
 import main.Models.StateCheckOut.ableToCheckOut;
 import main.Models.StateCheckOut.checkOutState;
 import main.Models.StateCheckOut.unableToCheckOut;
@@ -15,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author Joseph Saltalamacchia
  */
-public class Visitor {
+public class Visitor implements Serializable {
 
     private String firstName;
     private String lastName;
@@ -188,5 +190,16 @@ public class Visitor {
     }
 
 
+    @Override
+    public String toString() {
+        return "Visitor{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", ID=" + ID +
+                ", booksCheckedOut=" + booksCheckedOut +
+                '}';
+    }
 
 }
