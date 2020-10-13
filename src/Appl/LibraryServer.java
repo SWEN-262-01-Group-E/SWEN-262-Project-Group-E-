@@ -28,7 +28,7 @@ public class LibraryServer {
 
         HashMap<Integer, Book> allBooks = new HashMap<Integer, Book>();
 
-        Scanner reader = new Scanner(new File(BOOKSFILE))
+       // Scanner reader = new Scanner(new File(BOOKSFILE))
 
        /* if(args.length == 1) {
             try {

@@ -11,47 +11,27 @@ import java.util.Date;
  */
 public class TimeManager implements Serializable {
 
-    private static TimeManager instance;
-
     private Calendar calendar;
     private SimpleDateFormat format;
     private long lastUpdatedTime;
-    private boolean allowDateManipulation;
 
     /*
-        Retrieve the instance of the timeManager, so that all classes can manipulate the same instance
+        The default constructor for the class
      */
-    public static TimeManager getInstance()
+    public TimeManager()
     {
-        if(instance == null) { instance = new TimeManager(); }
-
-        return  instance;
-    }
-
-    /*
-        The constructor for the class
-     */
-    private TimeManager()
-    {
-        //finds calendar instance
         calendar = Calendar.getInstance();
         calendar.setTime(new Date());
         format = new SimpleDateFormat("yyyy-MM-dd");
         lastUpdatedTime = System.currentTimeMillis();
-        allowDateManipulation = true;
     }
 
-    /*
-        Set the date specifically using a string. Used when first reading from file.
-        Ensures that date cannot be changed once it is set.
-     */
-    public void setDate(String dateString) throws ParseException
+    public TimeManager(long millis)
     {
-        if(!allowDateManipulation) return;
-
-        calendar.setTime(format.parse(dateString));
+        calendar = Calendar.getInstance();
+        calendar.setTime(new Date(millis));
+        format = new SimpleDateFormat("yyyy-MM-dd");
         lastUpdatedTime = System.currentTimeMillis();
-        allowDateManipulation = false;
     }
 
     /*
@@ -99,8 +79,11 @@ public class TimeManager implements Serializable {
     /*
         Returns a string of the current date
      */
-    public String ToString()
+    @Override
+    public String toString()
     {
-        return format.format(getDate());
+        return "TimeManager{" +
+                "Time=" + calendar.getTimeInMillis() +
+                "}";
     }
 }
