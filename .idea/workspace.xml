@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TextFiles/Books.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="testbranch2" />
+        <entry key="$PROJECT_DIR$" value="Models" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -270,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602542125307</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Trying to fix the everything being broken thing">
+      <created>1602549670207</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602549670207</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +290,8 @@
     <MESSAGE value="Added Generic request model to facilitate organizing requests" />
     <MESSAGE value="Trying to fix the nobody running things thing" />
     <MESSAGE value="Preparing to merge back into Models branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparing to merge back into Models branch" />
+    <MESSAGE value="Trying to fix the everything being broken thing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix the everything being broken thing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="206" y="193" key="#LibraryServer" timestamp="1602478978220">
@@ -312,10 +318,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601858187209" />
-    <state x="326" y="133" key="CommitChangelistDialog2" timestamp="1602542124040">
+    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602549669198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="326" y="133" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542124040" />
+    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602549669198" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -352,10 +358,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="246" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602480675128" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1602542129095">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1602549674751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542129095" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602549674751" />
     <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602549583749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
