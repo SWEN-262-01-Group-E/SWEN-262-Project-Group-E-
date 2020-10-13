@@ -17,16 +17,20 @@ public class LibraryServer {
 
     private static OwningLibrary library;
 
-    public static void main(String[] args) {
+    private static final String BOOKSFILE = "TextFiles/Books.txt";
 
-        HashMap<Integer, Book> allBooks = new HashMap<Integer, Book>();
+    public static void main(String[] args) {
 
         //opens the library
         library = new OwningLibrary();
 
         library.openLibrary();
 
-        if(args.length == 1) {
+        HashMap<Integer, Book> allBooks = new HashMap<Integer, Book>();
+
+        Scanner reader = new Scanner(new File(BOOKSFILE))
+
+       /* if(args.length == 1) {
             try {
                 Scanner reader = new Scanner(new File(args[0]));
                 while(reader.hasNextLine())
@@ -42,7 +46,13 @@ public class LibraryServer {
             catch (FileNotFoundException e) {
                 System.out.println(e);
             }
-        }
+        }*/
+
+        //opens the library
+        library = new OwningLibrary();
+
+        library.openLibrary();
+
 
         StringBuilder commandBuilder = new StringBuilder();
         Scanner commandScanner = new Scanner(System.in);
@@ -91,6 +101,7 @@ public class LibraryServer {
 
     }
 
+
     private static ArrayList<String> splitCSV(String masterString) {
         ArrayList<String> arguments = new ArrayList<String>();
 
@@ -116,18 +127,18 @@ public class LibraryServer {
     }
 
 
-    /*
 
-    test to ensure that system persistence works
 
+    //test to ensure that system persistence works
+/*
     private static void testPersistence(OwningLibrary library){
         Book book1 = new Book(123456, "Bacon", new Date(), 500, 3);
         Book book2 = new Book(789456, "Bits", new Date(), 400, 4);
         Book book3 = new Book(564231, "United", new Date(), 5, 1000);
 
-        library.addBook(book1);
-        library.addBook(book2);
-        library.addBook(book3);
+        library.addBook(book1,1);
+        library.addBook(book2,1);
+        library.addBook(book3,1);
 
         //String firstName, String lastName, String address, int phoneNumber, int ID, ArrayList<Book> booksCheckedOut
 

@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="Trying to fix the nobody running things thing">
+    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TextFiles/Books.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextFiles/BookLog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TextFiles/BookLog.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextFiles/VisitorLog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TextFiles/VisitorLog.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +43,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -324,22 +320,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="1877" height="135" key="GridCell.Tab.0.bottom" timestamp="1602544527229">
+    <state width="1184" height="56" key="GridCell.Tab.0.bottom" timestamp="1602548499514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="135" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527229" />
-    <state width="1877" height="135" key="GridCell.Tab.0.center" timestamp="1602544527228">
+    <state width="1184" height="56" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
+    <state width="1184" height="56" key="GridCell.Tab.0.center" timestamp="1602548499514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="135" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527228" />
-    <state width="1877" height="135" key="GridCell.Tab.0.left" timestamp="1602544527228">
+    <state width="1184" height="56" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
+    <state width="1184" height="56" key="GridCell.Tab.0.left" timestamp="1602548499514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="135" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527228" />
-    <state width="1877" height="135" key="GridCell.Tab.0.right" timestamp="1602544527228">
+    <state width="1184" height="56" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
+    <state width="1184" height="56" key="GridCell.Tab.0.right" timestamp="1602548499514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="135" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602544527228" />
+    <state width="1184" height="56" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -360,10 +356,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542129095" />
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602542663245">
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602549583749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602542663245" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602549583749" />
     <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602480435806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
