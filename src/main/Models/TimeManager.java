@@ -26,11 +26,26 @@ public class TimeManager implements Serializable {
         lastUpdatedTime = System.currentTimeMillis();
     }
 
-    public TimeManager(long millis)
+    public TimeManager(String date, String time)
     {
-        calendar = Calendar.getInstance();
-        calendar.setTime(new Date(millis));
         format = new SimpleDateFormat("yyyy-MM-dd");
+        calendar = Calendar.getInstance();
+
+        //set the date for the calendar
+        try {
+            calendar.setTime(format.parse(date));
+        } catch (ParseException e) {
+            //Do something
+        }
+
+        //set the time for the calendar
+        //can only set as specific as the nearest second
+        String[] t = time.split(":");
+        calendar.set(Calendar.HOUR, Integer.parseInt(t[0]));
+        calendar.set(Calendar.MINUTE, Integer.parseInt(t[1]));
+        calendar.set(Calendar.SECOND, Integer.parseInt(t[2]));
+
+        //update the last time updated
         lastUpdatedTime = System.currentTimeMillis();
     }
 
@@ -85,7 +100,8 @@ public class TimeManager implements Serializable {
         this.UpdateCalendar();
 
         return "TimeManager{" +
-                "Time=" + calendar.getTimeInMillis() +
+                "Date=" + format.format(calendar.getTime()) +
+                "Time=" + calendar.get(Calendar.HOUR) + ":" + calendar.get(Calendar.MINUTE) + ":" + calendar.get(Calendar.SECOND) +
                 "}";
     }
 }
