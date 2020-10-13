@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class Book implements Serializable {
 
-    private int ISBN;
+    private long ISBN;
     private String title;
     private String authors;
     private String publisher;
@@ -28,7 +28,7 @@ public class Book implements Serializable {
      * @param totalPages  The total number of pages in a given copy of this book
      */
     //todo we should probably check that all of these values are valid
-    public Book(int ISBN, String title, String authors, String publisher, String publishDate, int totalPages, int totalCopies) {
+    public Book(long ISBN, String title, String authors, String publisher, String publishDate, int totalPages, int totalCopies) {
 
         this.ISBN = ISBN;
         this.title = title;
@@ -44,7 +44,7 @@ public class Book implements Serializable {
      * returns the unique identification number for this book
      * @return the unique identification number for this book
      */
-    public int getISBN() {
+    public long getISBN() {
         return ISBN;
     }
 

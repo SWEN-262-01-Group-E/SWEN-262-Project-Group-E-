@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class OwningLibrary {
 
-    private HashMap<Integer, LibraryEntry> Inventory = new HashMap<Integer, LibraryEntry> ();
+    private HashMap<Long, LibraryEntry> Inventory = new HashMap<Long, LibraryEntry> ();
     private HashMap<Integer, Visitor> Register = new HashMap<Integer, Visitor> ();
 
 
@@ -30,9 +30,8 @@ public class OwningLibrary {
     }
 
     public void addBook(Book book, int copies) {
-        Integer ISBN = book.getISBN();
-        LibraryEntry entry = new LibraryEntry(ISBN, copies);
-        Inventory.put(ISBN, entry);
+        LibraryEntry entry = new LibraryEntry(book.getISBN(), copies);
+        Inventory.put(book.getISBN(), entry);
     }
 
     public void addVisitor(Visitor visitor) {

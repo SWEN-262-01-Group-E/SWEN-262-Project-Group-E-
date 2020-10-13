@@ -26,7 +26,7 @@ public class LibraryServer {
 
         library.openLibrary();
 
-        HashMap<Integer, Book> allBooks = new HashMap<Integer, Book>();
+        HashMap<Long, Book> allBooks = new HashMap<Long, Book>();
 
        try{
            //creates the scanner to read the file and the suilder to create the book arguments
@@ -149,15 +149,17 @@ public class LibraryServer {
         int numParameters = 6;
         int currentParameter = 1;
 
-        int ISBN = 0;
+        long ISBN = 0;
         String title = "";
         String authors = "";
         String publisher = "";
         String date = "";
         int totalPages = 1;
 
-        for(int i = 1; i < line.length(); i++){
+        for(int i = 0; i < line.length(); i++){
             char c = line.charAt(i);
+
+            System.out.print(c);
 
             //if we are in the title or authors sections, append every character until notified to stop
             if(inTitle){
@@ -191,19 +193,22 @@ public class LibraryServer {
                         //end the current parameter, assign it to the correct value, and prepare to start again
                         switch (currentParameter){
                             case(1):
-                                ISBN = Integer.parseInt(argumentBuilder.toString().trim());
+                                ISBN = Long.parseLong(argumentBuilder.toString().trim());
                                 //reset the string builder after getting the value
                                 argumentBuilder = new StringBuilder();
                                 currentParameter++;
+                                System.out.println(ISBN);
+                                System.out.println(currentParameter);
                                 break;
                             case(2):
-                                title = argumentBuilder.toString().trim();
+                                title = argumentBuilder.toString();
                                 //reset the string builder after getting the value
                                 argumentBuilder = new StringBuilder();
                                 currentParameter++;
+                                System.out.println(title);
                                 break;
                             case(3):
-                                authors = argumentBuilder.toString().trim();
+                                authors = argumentBuilder.toString();
                                 //reset the string builder after getting the value
                                 argumentBuilder = new StringBuilder();
                                 break;

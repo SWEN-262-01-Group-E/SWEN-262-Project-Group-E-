@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,22 +338,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="1128" height="312" key="GridCell.Tab.0.bottom" timestamp="1602555447990">
+    <state width="1877" height="228" key="GridCell.Tab.0.bottom" timestamp="1602559127242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1128" height="312" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602555447990" />
-    <state width="1128" height="312" key="GridCell.Tab.0.center" timestamp="1602555447990">
+    <state width="1877" height="228" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602559127242" />
+    <state width="1877" height="228" key="GridCell.Tab.0.center" timestamp="1602559127242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1128" height="312" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602555447990" />
-    <state width="1128" height="312" key="GridCell.Tab.0.left" timestamp="1602555447989">
+    <state width="1877" height="228" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602559127242" />
+    <state width="1877" height="228" key="GridCell.Tab.0.left" timestamp="1602559127241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1128" height="312" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602555447989" />
-    <state width="1128" height="312" key="GridCell.Tab.0.right" timestamp="1602555447990">
+    <state width="1877" height="228" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602559127241" />
+    <state width="1877" height="228" key="GridCell.Tab.0.right" timestamp="1602559127242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1128" height="312" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602555447990" />
+    <state width="1877" height="228" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602559127242" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -376,10 +378,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602549583749" />
-    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602480435806">
+    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602559180960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602480435806" />
+    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602559180960" />
     <state x="151" y="105" key="new project wizard" timestamp="1602480613032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
