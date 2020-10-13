@@ -11,8 +11,10 @@ import java.util.Date;
 public class Book implements Serializable {
 
     private int ISBN;
+    private String title;
+    private String authors;
     private String publisher;
-    private Date publishDate;
+    private String publishDate;
     private int totalPages;
     private int totalCopies;
     private int copiesCheckedOut;
@@ -26,8 +28,11 @@ public class Book implements Serializable {
      * @param totalPages  The total number of pages in a given copy of this book
      */
     //todo we should probably check that all of these values are valid
-    public Book(int ISBN, String publisher, Date publishDate, int totalPages, int totalCopies) {
+    public Book(int ISBN, String title, String authors, String publisher, String publishDate, int totalPages, int totalCopies) {
+
         this.ISBN = ISBN;
+        this.title = title;
+        this.authors = authors;
         this.publisher = publisher;
         this.publishDate = publishDate;
         this.totalPages = totalPages;
@@ -65,7 +70,7 @@ public class Book implements Serializable {
      * Returns the date this book was published
      * @return the date this book was published
      */
-    public Date getPublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
 
