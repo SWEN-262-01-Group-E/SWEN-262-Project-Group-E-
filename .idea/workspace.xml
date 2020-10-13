@@ -44,7 +44,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -321,30 +321,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601858187209" />
-    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602557578782">
+    <state x="436" y="121" key="CommitChangelistDialog2" timestamp="1602557678873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602557578782" />
+    <state x="436" y="121" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602557678873" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="1184" height="56" key="GridCell.Tab.0.bottom" timestamp="1602548499514">
+    <state width="1877" height="312" key="GridCell.Tab.0.bottom" timestamp="1602557710382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="56" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
-    <state width="1184" height="56" key="GridCell.Tab.0.center" timestamp="1602548499514">
+    <state width="1877" height="312" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602557710382" />
+    <state width="1877" height="312" key="GridCell.Tab.0.center" timestamp="1602557710382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="56" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
-    <state width="1184" height="56" key="GridCell.Tab.0.left" timestamp="1602548499514">
+    <state width="1877" height="312" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602557710382" />
+    <state width="1877" height="312" key="GridCell.Tab.0.left" timestamp="1602557710382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="56" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
-    <state width="1184" height="56" key="GridCell.Tab.0.right" timestamp="1602548499514">
+    <state width="1877" height="312" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602557710382" />
+    <state width="1877" height="312" key="GridCell.Tab.0.right" timestamp="1602557710382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1184" height="56" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602548499514" />
+    <state width="1877" height="312" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602557710382" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -361,14 +361,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="246" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602480675128" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1602549674751">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1602557687690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602549674751" />
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602549583749">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602557687690" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602557732699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602549583749" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602557732699" />
     <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602480435806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
