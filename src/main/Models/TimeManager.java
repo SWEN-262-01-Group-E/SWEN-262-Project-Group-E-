@@ -82,6 +82,8 @@ public class TimeManager implements Serializable {
     @Override
     public String toString()
     {
+        this.UpdateCalendar();
+
         return "TimeManager{" +
                 "Time=" + calendar.getTimeInMillis() +
                 "}";

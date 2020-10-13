@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Models/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TimeManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
