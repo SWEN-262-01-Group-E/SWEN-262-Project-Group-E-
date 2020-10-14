@@ -30,7 +30,7 @@ public class OwningLibrary {
     }
 
     public void addBook(Book book, int copies) {
-        LibraryEntry entry = new LibraryEntry(book.getISBN(), copies);
+        LibraryEntry entry = new LibraryEntry(book, copies);
         Inventory.put(book.getISBN(), entry);
     }
 
@@ -76,6 +76,33 @@ public class OwningLibrary {
     }
 
     /**
+     * Allows a given visitor to check out a book
+     * @param visitor the visitor checking out the book
+     * @param ISBN the ISBN of the book being checked out
+     * @return if the visitor successfully checked out the book or not
+     */
+    public Boolean visitorCheckOut(Visitor visitor, Long ISBN){
+        if (Inventory.containsKey(ISBN)) {
+            //retrive the book objject that the Library entry is wrapping
+            Book book = Inventory.get(ISBN).getBook();
+            if (Inventory.get(ISBN).canBeCheckedOut() && visitor.addCheckedOutBook(book)) {
+                Inventory.get(ISBN).checkoutBook();
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
+
+    //=====================================================================================================================
+    //==================================================Readers and Writers================================================
+    //=====================================================================================================================
+
+
+    /**
      * A private helper method to read all of the saved Books from the file they were saved on
      */
     private void readBooks(){
@@ -98,13 +125,13 @@ public class OwningLibrary {
         }catch (FileNotFoundException f) {
             System.out.println("BookLog file not found");
         }catch(IOException i){
-            System.out.println("Error initializing stream");
+            System.out.println("No Books In library");
         }catch (ClassNotFoundException c){
             System.out.println("could not find class");
         }
     }
 
-  
+
     /**
      * A private helper method to read all of the saved Visitors from the file they were saved on
      */
@@ -127,9 +154,9 @@ public class OwningLibrary {
             oVisitor.close();
 
         }catch (FileNotFoundException f) {
-            System.out.println("BookLog file not found");
+            System.out.println("VisitorLog file not found");
         }catch(IOException i){
-            System.out.println("Error initializing stream");
+            System.out.println("No Visitors registered in library");
         }catch (ClassNotFoundException c){
             System.out.println("could not find class");
         }
@@ -235,15 +262,6 @@ public class OwningLibrary {
     }
 
 
-    public Boolean visitorCheckOut(Visitor visitor, Book book){
-        if (Inventory.containsKey(book.getISBN())) {
-            if (Inventory.get(book.getISBN()).canBeCheckedOut() && visitor.addCheckedOutBook(book)) {
-                Inventory.get(book.getISBN()).checkoutBook();
-                return true;
-            }
-        }
-        return false;
-    }
 
     /*public int visitorCheckIn(Visitor visitor, Book book) {
         int cost = -1;

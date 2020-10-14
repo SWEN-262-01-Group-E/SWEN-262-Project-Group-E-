@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="">
+    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="Set core loop to watch for Visitor Registration and return the appropriate response">
+      <change afterPath="$PROJECT_DIR$/src/Requests/BorrowRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/LibraryEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +83,7 @@
       <recent name="Requests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Validator">
+  <component name="RunManager" selected="Application.LibraryServer">
     <configuration name="CSVBookParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Appl.CSVBookParser" />
       <module name="SWEN-262-Project-Group-E-1" />
@@ -167,10 +172,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LibraryServer" />
         <item itemvalue="Application.Validator" />
-        <item itemvalue="Application.LibraryServer" />
         <item itemvalue="Application.CSVBookParser" />
-        <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.Validator" />
         <item itemvalue="Application.LibraryServer" />
       </list>
     </recent_temporary>
@@ -320,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602621551281</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed a formatting error in the Library server">
+      <created>1602656385797</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602656385797</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +350,8 @@
     <MESSAGE value="Trying to fix the everything being broken thing" />
     <MESSAGE value="Anthony Created the TimeManager" />
     <MESSAGE value="Fixed the BookParser and the commandline parsing. Starting on the Request-Response." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the BookParser and the commandline parsing. Starting on the Request-Response." />
+    <MESSAGE value="Fixed a formatting error in the Library server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a formatting error in the Library server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="206" y="193" key="#LibraryServer" timestamp="1602478978220">
@@ -357,10 +370,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
-    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1602648884817">
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1602660075172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602648884817" />
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602660075172" />
     <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601858187209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -369,30 +382,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1602617784742" />
-    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602655823902">
+    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602657591791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602655823902" />
+    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657591791" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="894" height="212" key="GridCell.Tab.0.bottom" timestamp="1602655483622">
+    <state width="1086" height="211" key="GridCell.Tab.0.bottom" timestamp="1602658436083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="894" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483622" />
-    <state width="894" height="212" key="GridCell.Tab.0.center" timestamp="1602655483621">
+    <state width="1086" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602658436083" />
+    <state width="1086" height="211" key="GridCell.Tab.0.center" timestamp="1602658436083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="894" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483621" />
-    <state width="894" height="212" key="GridCell.Tab.0.left" timestamp="1602655483621">
+    <state width="1086" height="211" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602658436083" />
+    <state width="1086" height="211" key="GridCell.Tab.0.left" timestamp="1602658436082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="894" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483621" />
-    <state width="894" height="212" key="GridCell.Tab.0.right" timestamp="1602655483621">
+    <state width="1086" height="211" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602658436082" />
+    <state width="1086" height="211" key="GridCell.Tab.0.right" timestamp="1602658436083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="894" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483621" />
+    <state width="1086" height="211" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602658436083" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -413,10 +426,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602621553319" />
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655812371">
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602657541941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602655812371" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657541941" />
     <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602648343056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
