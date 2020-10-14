@@ -18,8 +18,8 @@ import java.util.Map;
 
 public class OwningLibrary {
 
-    private HashMap<Integer, LibraryEntry> Inventory = new HashMap<Integer, LibraryEntry> ();
-    private HashMap<Integer, Visitor> Register = new HashMap<Integer, Visitor> ();
+    private HashMap<Long, LibraryEntry> Inventory = new HashMap<Long, LibraryEntry> ();
+    private HashMap<Long, Visitor> Register = new HashMap<Long, Visitor> ();
 
     private TimeManager time;
     /**
@@ -30,16 +30,24 @@ public class OwningLibrary {
     }
 
     public void addBook(Book book, int copies) {
-        Integer ISBN = book.getISBN();
-        LibraryEntry entry = new LibraryEntry(ISBN, copies);
-        Inventory.put(ISBN, entry);
+        LibraryEntry entry = new LibraryEntry(book.getISBN(), copies);
+        Inventory.put(book.getISBN(), entry);
     }
 
     public void addVisitor(Visitor visitor) {
-        Integer ID = visitor.getID();
+        Long ID = visitor.getID();
         Register.put(ID, visitor);
     }
-  @Override
+
+    public HashMap<Long, Visitor> getRegister() {
+        return Register;
+    }
+
+    public HashMap<Long, LibraryEntry> getInventory() {
+        return Inventory;
+    }
+
+    @Override
     public String toString() {
         return "OwningLibrary{" +
                 "Inventory=" + Inventory.toString() +
