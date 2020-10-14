@@ -1,7 +1,7 @@
 package main.Models;
 
 import java.util.Date;
-// TEST
+
 /**
  * A model that represents an individual visit
  *

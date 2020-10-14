@@ -257,4 +257,21 @@ public class OwningLibrary {
         return cost;
     }*/
 
+    public ArrayList<String> statistics() {
+        ArrayList<String> report = new ArrayList<>();
+        int totalBooks = 0;
+        int totalVisitors = 0;
+
+        for (long key : Inventory.keySet()) {
+            totalBooks += Inventory.get(key).getTotalCopies();
+        }
+        report.add(Integer.toString(totalBooks));
+        for (long key : Register.keySet()){
+            totalVisitors += 1;
+        }
+        report.add(Integer.toString(totalVisitors));
+
+        return report;
+    }
+
 }
