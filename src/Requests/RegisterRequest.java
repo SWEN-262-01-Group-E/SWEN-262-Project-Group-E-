@@ -1,22 +1,61 @@
 package Requests;
 
+import Resposes.RegisterResponse;
 import Resposes.Response;
 import main.Models.OwningLibrary;
+import main.Models.Visitor;
 
 import java.util.ArrayList;
 
-public class RegisterRequest extends Request {
+/**
+ * Represents the "register" request, adding a visitor to the provided libray
+ */
+public class RegisterRequest implements Request {
 
+    RequestNames.RequestName Command = RequestNames.RequestName.REGISTER;
+
+    //a proxy for the library that the Visitor is being added to
+    private OwningLibrary proxyLibrary;
+
+    //a counter to increment the Visitor's id every time a new one is created, ensuring that every ID is unique
+    private static Long nextVisitorID = Long.valueOf(1);
+
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String phoneNumber;
 
     /**
-     * Constructor for a new Request
+     * Constructor for a new "register" Request
      *
-     * @param commandString The String version of a command, to be parsed into a CommandName
-     * @param parameters    The String of Prarmaters
+     * @param firstName the first name of the visitor
+     * @param lastName the last name of the visitor
+     * @param address the address of the visitor
+     * @param phoneNumber the phone number of the visitor
      */
-    public RegisterRequest(String commandString, ArrayList<String> parameters) {
-        super(commandString, parameters);
+    public RegisterRequest(String firstName, String lastName, String address, String phoneNumber, OwningLibrary library) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        proxyLibrary = library;
     }
 
 
+    @Override
+    public Response performRequest() {
+
+        Visitor newVisitor = new Visitor(firstName,lastName,address,phoneNumber,nextVisitorID);
+
+        //ensure that the visitor is not already registered
+        if(proxyLibrary.getRegister().containsValue(newVisitor)){
+            return new RegisterResponse();
+        }
+
+        //only increment the nextVisitorID when it is known that the visitor will be added
+        nextVisitorID ++;
+        proxyLibrary.addVisitor(newVisitor);
+        return new RegisterResponse(newVisitor.getID());
+    }
 }

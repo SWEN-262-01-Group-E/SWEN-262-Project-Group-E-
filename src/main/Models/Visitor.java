@@ -22,8 +22,8 @@ public class Visitor implements Serializable {
     private String firstName;
     private String lastName;
     private String address;
-    private int phoneNumber;  //TODO:do we want this to be a string or an integer?
-    private int ID;
+    private String phoneNumber;
+    private long ID;
     private ArrayList<Book> booksCheckedOut;  //this structure means that the first copy of a
     private double totalFines;   //TODO this can probably be removed and replaced with a class that calculates the value
 
@@ -36,7 +36,7 @@ public class Visitor implements Serializable {
      * @param phoneNumber  The phone number of the visitor
      * @param ID  The unique ID number of the visitor
      */
-    public Visitor(String firstName, String lastName, String address, int phoneNumber, int ID) {
+    public Visitor(String firstName, String lastName, String address, String phoneNumber, long ID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -54,7 +54,7 @@ public class Visitor implements Serializable {
      * @param ID  The unique ID number of the visitor
      * @param booksCheckedOut A list of books currently checked out by the visitor, organized by the book's ISBN
      */
-    public Visitor(String firstName, String lastName, String address, int phoneNumber, int ID, ArrayList<Book> booksCheckedOut) {
+    public Visitor(String firstName, String lastName, String address, String phoneNumber, long ID, ArrayList<Book> booksCheckedOut) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -115,7 +115,7 @@ public class Visitor implements Serializable {
      * Returns the phone number of the visitor
      * @return the phone number of the visitor
      */
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -123,7 +123,7 @@ public class Visitor implements Serializable {
      * Sets the phone number of the visitor to the entered integer
      * @param phoneNumber the new phone number
      */
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -131,7 +131,7 @@ public class Visitor implements Serializable {
      * returns the unique ID number of the visitor
      * @return the unique ID number of the visitor
      */
-    public int getID() {
+    public long getID() {
         return ID;
     }
 
@@ -189,6 +189,25 @@ public class Visitor implements Serializable {
 
     }
 
+    /**
+     * A method used to compare visitors to each other by first and last name, address, and phone nubmber
+     * @param o
+     * @return
+     */
+    @Override
+    public boolean equals(Object o){
+        if(!(o instanceof Visitor)){
+            return false;
+        }
+        if(((Visitor) o).firstName.equals(this.firstName) &&
+            ((Visitor) o).lastName.equals(this.lastName) &&
+            ((Visitor) o).address.equals(this.address) &&
+            ((Visitor) o).phoneNumber.equals(this.phoneNumber)){
+            return true;
+        }
+
+        return false;
+    }
 
     @Override
     public String toString() {

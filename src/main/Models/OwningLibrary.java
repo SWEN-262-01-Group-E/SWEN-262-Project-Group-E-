@@ -18,7 +18,7 @@ import java.util.Map;
 public class OwningLibrary {
 
     private HashMap<Long, LibraryEntry> Inventory = new HashMap<Long, LibraryEntry> ();
-    private HashMap<Integer, Visitor> Register = new HashMap<Integer, Visitor> ();
+    private HashMap<Long, Visitor> Register = new HashMap<Long, Visitor> ();
 
 
 
@@ -35,10 +35,19 @@ public class OwningLibrary {
     }
 
     public void addVisitor(Visitor visitor) {
-        Integer ID = visitor.getID();
+        Long ID = visitor.getID();
         Register.put(ID, visitor);
     }
-  @Override
+
+    public HashMap<Long, Visitor> getRegister() {
+        return Register;
+    }
+
+    public HashMap<Long, LibraryEntry> getInventory() {
+        return Inventory;
+    }
+
+    @Override
     public String toString() {
         return "OwningLibrary{" +
                 "Inventory=" + Inventory.toString() +
