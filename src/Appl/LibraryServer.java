@@ -24,8 +24,6 @@ public class LibraryServer {
         //opens the library
         library = new OwningLibrary();
 
-        library.openLibrary();
-
         HashMap<Long, Book> allBooks = new HashMap<Long, Book>();
 
       // Scanner reader = new Scanner(new File(BOOKSFILE))

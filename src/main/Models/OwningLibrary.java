@@ -98,7 +98,7 @@ public class OwningLibrary {
         }catch (FileNotFoundException f) {
             System.out.println("BookLog file not found");
         }catch(IOException i){
-            System.out.println("Error initializing stream");
+            System.out.println("No Books In library");
         }catch (ClassNotFoundException c){
             System.out.println("could not find class");
         }
@@ -127,9 +127,9 @@ public class OwningLibrary {
             oVisitor.close();
 
         }catch (FileNotFoundException f) {
-            System.out.println("BookLog file not found");
+            System.out.println("VisitorLog file not found");
         }catch(IOException i){
-            System.out.println("Error initializing stream");
+            System.out.println("No Visitors registered in library");
         }catch (ClassNotFoundException c){
             System.out.println("could not find class");
         }
