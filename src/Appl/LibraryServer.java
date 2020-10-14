@@ -28,8 +28,9 @@ public class LibraryServer {
 
         HashMap<Long, Book> allBooks = new HashMap<Long, Book>();
 
-       try{
+      // Scanner reader = new Scanner(new File(BOOKSFILE))
 
+       try{
            allBooks = CSVBookParser.CreateBooks(new File(BOOKSFILE));
        }catch (FileNotFoundException f){
            System.out.println("Could dont Find Books file");

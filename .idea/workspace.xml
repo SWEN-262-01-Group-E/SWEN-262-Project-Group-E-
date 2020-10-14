@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Requests/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resposes/PartialResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resposes/RegisterResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requests/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resposes/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resposes/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TimeManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +42,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
