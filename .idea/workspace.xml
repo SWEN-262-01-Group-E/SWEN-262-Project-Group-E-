@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Models/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TimeManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,30 +369,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1602617784742" />
-    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602621550064">
+    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602655378307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602621550064" />
+    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602655378307" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="1222" height="308" key="GridCell.Tab.0.bottom" timestamp="1602642683417">
+    <state width="894" height="212" key="GridCell.Tab.0.bottom" timestamp="1602655483622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1222" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602642683417" />
-    <state width="1222" height="308" key="GridCell.Tab.0.center" timestamp="1602642683417">
+    <state width="894" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483622" />
+    <state width="894" height="212" key="GridCell.Tab.0.center" timestamp="1602655483621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1222" height="308" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602642683417" />
-    <state width="1222" height="308" key="GridCell.Tab.0.left" timestamp="1602642683417">
+    <state width="894" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483621" />
+    <state width="894" height="212" key="GridCell.Tab.0.left" timestamp="1602655483621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1222" height="308" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602642683417" />
-    <state width="1222" height="308" key="GridCell.Tab.0.right" timestamp="1602642683417">
+    <state width="894" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483621" />
+    <state width="894" height="212" key="GridCell.Tab.0.right" timestamp="1602655483621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1222" height="308" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602642683417" />
+    <state width="894" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602655483621" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -414,10 +413,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602621553319" />
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602617188947">
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655381010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602617188947" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602655381010" />
     <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602648343056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
