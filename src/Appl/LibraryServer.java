@@ -2,22 +2,22 @@ package Appl;
 
 import main.Models.Book;
 import main.Models.OwningLibrary;
-import main.Models.Visitor;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.Date;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class LibraryServer {
 
     private static OwningLibrary library;
 
-    private static final String BOOKSFILE = "TextFiles/Books.txt";
+    public static final String BOOKSFILE = "TextFiles/Books.txt";
 
     public static void main(String[] args) {
 
@@ -26,32 +26,15 @@ public class LibraryServer {
 
         library.openLibrary();
 
-        HashMap<Integer, Book> allBooks = new HashMap<Integer, Book>();
+        HashMap<Long, Book> allBooks = new HashMap<Long, Book>();
 
-        Scanner reader = new Scanner(new File(BOOKSFILE))
+      // Scanner reader = new Scanner(new File(BOOKSFILE))
 
-       /* if(args.length == 1) {
-            try {
-                Scanner reader = new Scanner(new File(args[0]));
-                while(reader.hasNextLine())
-                {
-                    ArrayList<String> arguments = splitCSV(reader.nextLine());
-
-                    Book b = new Book(Integer.parseInt(arguments.get(0)),arguments.get(3),
-                            new Date(arguments.get(4)), 0, 1);
-
-                    allBooks.put(b.getISBN(), b);
-                }
-            }
-            catch (FileNotFoundException e) {
-                System.out.println(e);
-            }
-        }*/
-
-        //opens the library
-        library = new OwningLibrary();
-
-        library.openLibrary();
+       try{
+           allBooks = CSVBookParser.CreateBooks(new File(BOOKSFILE));
+       }catch (FileNotFoundException f){
+           System.out.println("Could dont Find Books file");
+       }
 
 
         StringBuilder commandBuilder = new StringBuilder();
@@ -62,40 +45,46 @@ public class LibraryServer {
                 System.out.print("Enter commands >");
                 commandBuilder.append(commandScanner.nextLine());
             } while(!commandBuilder.toString().endsWith(";"));
-            for(String command : commandBuilder.toString().split(";")) {
 
-                System.out.println(commandBuilder.toString());
-                if(command.equals("quit")) {
+            //deletes the semicolon at the end of the string
+            commandBuilder.deleteCharAt(commandBuilder.length()-1);
+
+            ArrayList<String> Parameters = new ArrayList<String>();
+            for(String command : commandBuilder.toString().split(",")) {
+
+                String actualCommand = command.trim();
+
+                /*if(command.equals("quit")) {
                     isRunning = false;
                     break;
-                }
-                else if(command.length() > 0) {
+                }*/
+                Parameters.add(actualCommand);
+            }//end for loop
 
-                    ArrayList<String> arguments = splitCSV(command);
+            if(Parameters.size() > 0) {
 
-                    switch(arguments.get(0)) {
-                        default:
-                            break;
-                        case "command":
-                            //Check arguments and call method method for that command
-                            //Example:
-                            /*
-                                if(arguments.size() == 3)
-                                    command_method(arguments.get(1), arguments.get(2))
-                            */
-                            //Could also parse integers and check those
-                            break;
-                    }
-                }
+                switch(Parameters.get(0)) {
+                    default:
+                        System.out.println("Invalid command, please try again");
+                        break;
+                    case "command":
+                        //Check arguments and call method method for that command
+                        //Example:
+                        /*
+                            if(arguments.size() == 3)
+                            command_method(arguments.get(1), arguments.get(2))
+                        */
+                        //Could also parse integers and check those
+                        break;
+                    }//end switch
+                }//end if-else
 
-            }
         } while(isRunning);
 
         //Save Library
         //End Application
         library.closeLibrary();
 
-        System.out.println("IT WORKS");
         //used to test that the system worked
         //testPersistence(library);
 
@@ -125,8 +114,6 @@ public class LibraryServer {
 
         return arguments;
     }
-
-
 
 
     //test to ensure that system persistence works

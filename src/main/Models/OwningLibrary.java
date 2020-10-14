@@ -2,6 +2,7 @@ package main.Models;
 
 import java.io.*;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,29 +18,36 @@ import java.util.Map;
 
 public class OwningLibrary {
 
-    private HashMap<Integer, LibraryEntry> Inventory = new HashMap<Integer, LibraryEntry> ();
-    private HashMap<Integer, Visitor> Register = new HashMap<Integer, Visitor> ();
+    private HashMap<Long, LibraryEntry> Inventory = new HashMap<Long, LibraryEntry> ();
+    private HashMap<Long, Visitor> Register = new HashMap<Long, Visitor> ();
 
-
-
+    private TimeManager time;
     /**
      * Creates a library with no books or visitors
      */
     public OwningLibrary() {
-        //Nothing is needed here
+        openLibrary();
     }
 
     public void addBook(Book book, int copies) {
-        Integer ISBN = book.getISBN();
-        LibraryEntry entry = new LibraryEntry(ISBN, copies);
-        Inventory.put(ISBN, entry);
+        LibraryEntry entry = new LibraryEntry(book.getISBN(), copies);
+        Inventory.put(book.getISBN(), entry);
     }
 
     public void addVisitor(Visitor visitor) {
-        Integer ID = visitor.getID();
+        Long ID = visitor.getID();
         Register.put(ID, visitor);
     }
-  @Override
+
+    public HashMap<Long, Visitor> getRegister() {
+        return Register;
+    }
+
+    public HashMap<Long, LibraryEntry> getInventory() {
+        return Inventory;
+    }
+
+    @Override
     public String toString() {
         return "OwningLibrary{" +
                 "Inventory=" + Inventory.toString() +
@@ -54,6 +62,7 @@ public class OwningLibrary {
 
         writeVisitors();
         writeBooks();
+        writeTime();
     }
 
     /**
@@ -63,6 +72,7 @@ public class OwningLibrary {
 
         readVisitors();
         readBooks();
+        readTime();
     }
 
     /**
@@ -180,6 +190,45 @@ public class OwningLibrary {
 
         }catch(FileNotFoundException f){
             System.out.println("Visitor File Not Found");
+        } catch(IOException i){
+            System.out.println("Error initializing stream");
+        }
+    }
+
+    private void readTime() {
+        try{
+            FileInputStream fTime = new FileInputStream(new File("TextFiles/TimeLog.bin"));
+            ObjectInputStream oTime = new ObjectInputStream(fTime);
+
+            try{
+                //Use file to create TimeManager
+                time = (TimeManager)oTime.readObject();
+            }catch (EOFException ignored){
+            }
+
+            fTime.close();
+            oTime.close();
+
+        }catch (FileNotFoundException f) {
+            //if no file, create a new TimeManager
+            time = new TimeManager();
+        }catch(IOException i){
+            System.out.println("Error initializing stream");
+        }catch (ClassNotFoundException c){
+            System.out.println("could not find class");
+        }
+    }
+    private void writeTime() {
+        try{
+            //create a writer for the visitors
+            FileOutputStream fTime = new FileOutputStream(new File("TextFiles/TimeLog.bin"));
+            ObjectOutputStream oTime = new ObjectOutputStream(fTime);
+
+            //writes the time object into the file
+            oTime.writeObject(time);
+
+        }catch(FileNotFoundException f){
+            System.out.println("Time File Not Found");
         } catch(IOException i){
             System.out.println("Error initializing stream");
         }

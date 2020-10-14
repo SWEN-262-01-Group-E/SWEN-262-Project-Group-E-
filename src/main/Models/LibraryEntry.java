@@ -8,11 +8,11 @@ import java.io.Serializable;
 
 public class LibraryEntry implements Serializable {
 
-    private int ISBN;
+    private long ISBN;
     private int totalCopies;
     private int copiesCheckedOut;
 
-    public LibraryEntry(int ISBN, int totalCopies) {
+    public LibraryEntry(long ISBN, int totalCopies) {
         this.ISBN = ISBN;
         this.totalCopies = totalCopies;
         this.copiesCheckedOut = 0;
@@ -42,7 +42,7 @@ public class LibraryEntry implements Serializable {
         return copiesCheckedOut;
     }
 
-    public int getISBN(){
+    public long getISBN(){
         return ISBN;
     }
 
