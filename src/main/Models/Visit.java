@@ -1,5 +1,6 @@
 package main.Models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
 public class Visit {
 
     private int VisitorID;
-    private Date ArrivalTme = null;
+    private Date ArrivalTime = null;
     private Date DepartureTime = null;
 
     /**
@@ -20,7 +21,7 @@ public class Visit {
     public Visit(int VisitorID, Date arrivalTme) {
 
         this.VisitorID = VisitorID;
-        ArrivalTme = arrivalTme;
+        ArrivalTime = arrivalTme;
     }
 
     /**
@@ -32,4 +33,11 @@ public class Visit {
 
     public boolean getIsOngoingVisit() {return DepartureTime == null; }
     public int getVisitorID() {return VisitorID; }
+
+    public long getLengthOfVisit() {
+        if(DepartureTime != null)
+            return DepartureTime.getTime() - ArrivalTime.getTime();
+
+            return 0;
+    }
 }

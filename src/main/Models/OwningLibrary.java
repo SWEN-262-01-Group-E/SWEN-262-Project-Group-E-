@@ -325,16 +325,52 @@ public class OwningLibrary {
         }
     }
 
-    private void WriteReport(int month, int year)
+    private void writeReport(int month, int year)
     {
         //TODO: Query the log files by month and year, and create the stats from them
 
+        File directory = new File("TextFiles");
+
+        File[] files = directory.listFiles();
+
+        long lengthOfTime = 0;
+        int numberOfVisits = 0;
+
+        for(File f : files) {
+            if(f.getName().startsWith(String.format("VisitLog-%04d-%02d", year, month))) {
+                try {
+                    FileInputStream fVisits = new FileInputStream(f);
+                    ObjectInputStream oVisits = new ObjectInputStream(fVisits);
+
+                    Object readObject = oVisits.readObject();
+                    if(readObject instanceof ArrayList<?>) {
+                        ArrayList<Visit> dailyVisits = (ArrayList<Visit>) oVisits.readObject();
+                        for(Visit v : dailyVisits) {
+                            lengthOfTime += v.getLengthOfVisit();
+                            numberOfVisits++;
+                        }
+
+                    }
+
+                } catch (ClassNotFoundException | IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println("Report:");
+        System.out.println("Number of books owned by the library: ");
+        System.out.println("Number of visitors to the library: " + numberOfVisits);
+        System.out.println("The average amount of time spent at the library for a visit: "
+    + ((lengthOfTime / numberOfVisits) / 60 / 1000) + " minutes");
+        System.out.println("The books purchased for the specified month: ");
+        System.out.println("The amount of money collected through checked out book fines: ");
+
         /*
-            The number of books currently owned by the library.
-            The number of visitors of the library.
-            The average amount of time spent at the library for a visit.
-            The books purchased for the specified month.
-            The amount of money collected through checked out book fines
+            [ ] The number of books currently owned by the library.
+            [X] The number of visitors of the library.
+            [X] The average amount of time spent at the library for a visit.
+            [ ] The books purchased for the specified month.
+            [ ] The amount of money collected through checked out book fines
          */
     }
 
