@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="Preparing to merge back into Models branch">
+    <list default="true" id="e8f69b2b-a02d-4ab7-b267-125b6336a1a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Visit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +98,10 @@
       </method>
     </configuration>
     <configuration name="LibraryServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Appl.LibraryServer" />
-      <module name="SWEN-262-Project-Group-E-1" />
+      <module name="SWEN-262-Project-Group-E-" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Appl.*" />
@@ -167,6 +172,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CSVBookParser" />
+      <item itemvalue="Application.LibraryServer" />
+      <item itemvalue="Application.Validator" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LibraryServer" />
@@ -359,18 +369,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="320" y="110" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1602480782920" />
-    <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602480806583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="128" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602723869007">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="128" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602723869007" />
     <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602480806583" />
-    <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602133606734">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602726617705">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602726617705" />
     <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
     <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1602660075172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602660075172" />
+    <state x="402" y="257" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602723860277">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="402" y="257" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1602723860277" />
     <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601858187209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -379,29 +395,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1602617784742" />
-    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602657591791">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="317" y="16" key="CommitChangelistDialog2" timestamp="1602726658666">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="317" y="16" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602726658666" />
     <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657591791" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="262" key="GridCell.Tab.0.bottom" timestamp="1602726673430">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602726673430" />
     <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
-    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="262" key="GridCell.Tab.0.center" timestamp="1602726673428">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602726673428" />
     <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
-    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="262" key="GridCell.Tab.0.left" timestamp="1602726673427">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602726673427" />
     <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
-    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="262" key="GridCell.Tab.0.right" timestamp="1602726673429">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="262" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602726673429" />
     <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />

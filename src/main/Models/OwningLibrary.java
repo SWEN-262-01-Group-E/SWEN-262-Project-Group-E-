@@ -3,6 +3,7 @@ package main.Models;
 import java.io.*;
 
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -20,12 +21,18 @@ public class OwningLibrary {
 
     private HashMap<Long, LibraryEntry> Inventory = new HashMap<Long, LibraryEntry> ();
     private HashMap<Long, Visitor> Register = new HashMap<Long, Visitor> ();
+    private ArrayList<Visit> Visits = new ArrayList<Visit>();
 
     private TimeManager time;
+
+    private LocalTime openingTime;
+    private LocalTime closingTime;
     /**
      * Creates a library with no books or visitors
      */
-    public OwningLibrary() {
+    public OwningLibrary(LocalTime openingTime, LocalTime closingTime) {
+        this.openingTime = openingTime;
+        this.closingTime = closingTime;
         openLibrary();
     }
 
@@ -63,13 +70,52 @@ public class OwningLibrary {
         writeVisitors();
         writeBooks();
         writeTime();
+
+
+        //Checks everyone out of the library for the day and writes a record of it
+        for(Visit v: Visits)
+        {
+            if (v.getIsOngoingVisit()) v.endVisit(time.getDate());
+        }
+        writeVisits();
+        Visits.clear();
     }
 
     /**
-     * saves the visitors and Books to an external file
+     * Starts the visit of a registered visitor
+     * @param visitorID the visitor checking out the book, assuming they are not checked in
+     * @return the Visit object representing the status of their visit
+     */
+    public Visit startVisit(int visitorID) {
+        //Checks to make sure they aren't already checked in (visitors can check in multiple times per day)
+        for(Visit v : Visits) {
+            if(v.getVisitorID() == visitorID && v.getIsOngoingVisit()) return v;
+        }
+
+        Visit v = new Visit(visitorID, time.getDate());
+        Visits.add(v);
+
+        return v;
+    }
+
+    /**
+     * Ends the present visit of the visitor, if they are currently checked in
+     * @param visitorID the visitor visiting the library
+     */
+    public void endVisit(int visitorID) {
+        for(Visit v : Visits) {
+            if(v.getVisitorID() == visitorID && v.getIsOngoingVisit()) {
+                v.endVisit(time.getDate());
+                return;
+            }
+        }
+    }
+
+
+    /**
+     * loads the visitors and Books from an external file
      */
     public void openLibrary(){
-
         readVisitors();
         readBooks();
         readTime();
@@ -261,7 +307,36 @@ public class OwningLibrary {
         }
     }
 
+    private void writeVisits()
+    {
+        try{
+            //create a writer for the daily visits
+            FileOutputStream fTime = new FileOutputStream(new File("TextFiles/VisitLog-"
+                    + time.getFormat().format(time.getDate()) + ".bin"));
+            ObjectOutputStream oTime = new ObjectOutputStream(fTime);
 
+            //writes the time object into the file
+            oTime.writeObject(Visits);
+
+        }catch(FileNotFoundException f){
+            System.out.println("Visit log file Not Found");
+        } catch(IOException i){
+            System.out.println("Error initializing stream");
+        }
+    }
+
+    private void WriteReport(int month, int year)
+    {
+        //TODO: Query the log files by month and year, and create the stats from them
+
+        /*
+            The number of books currently owned by the library.
+            The number of visitors of the library.
+            The average amount of time spent at the library for a visit.
+            The books purchased for the specified month.
+            The amount of money collected through checked out book fines
+         */
+    }
 
     /*public int visitorCheckIn(Visitor visitor, Book book) {
         int cost = -1;
