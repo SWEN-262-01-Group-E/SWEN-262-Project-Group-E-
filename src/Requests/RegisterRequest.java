@@ -33,12 +33,14 @@ public class RegisterRequest implements Request {
      * @param address the address of the visitor
      * @param phoneNumber the phone number of the visitor
      */
-    public RegisterRequest(String firstName, String lastName, String address, String phoneNumber, OwningLibrary library) {
+    public RegisterRequest(OwningLibrary library, ArrayList<String> parameters) {
 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
+        if(parameters.size() == 5) {
+            this.firstName = parameters.get(1);
+            this.lastName = parameters.get(2);
+            this.address = parameters.get(3);
+            this.phoneNumber = parameters.get(4);
+        }
         proxyLibrary = library;
     }
 
