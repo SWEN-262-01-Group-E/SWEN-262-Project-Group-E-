@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c8194fd-89d5-46f1-8941-bf3f6dac7d29" name="Default Changelist" comment="Preparing to merge back into Models branch">
+    <list default="true" id="3e43d73c-6222-40a2-a3ea-5deefb32a2bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project-Group-E-/Appl/LibraryServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SWEN-262-Project-Group-E-/Appl/LibraryServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SWEN-262-Project-Group-E-/main/Models/OwningLibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SWEN-262-Project-Group-E-/main/Models/OwningLibrary.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Visit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +178,18 @@
         <item itemvalue="Application.LibraryServer" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -351,9 +365,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed a formatting error in the Library server" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="193" key="#LibraryServer" timestamp="1602478978220">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="147" y="47" key="#LibraryServer" timestamp="1602657213982">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="147" y="47" key="#LibraryServer/0.0.1366.728@0.0.1366.728" timestamp="1602657213982" />
     <state x="206" y="193" key="#LibraryServer/0.0.1920.1040@0.0.1920.1040" timestamp="1602478978220" />
     <state x="320" y="110" key="#Project_Structure" timestamp="1602480782920">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -367,10 +382,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
-    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1602660075172">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1602659095373">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602660075172" />
+    <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602659095373" />
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602648884817" />
     <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601858187209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -387,21 +403,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="639" height="181" key="GridCell.Tab.0.bottom" timestamp="1602657261653">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="639" height="181" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
     <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
-    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="639" height="181" key="GridCell.Tab.0.center" timestamp="1602657261652">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="639" height="181" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602657261652" />
     <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
-    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="639" height="181" key="GridCell.Tab.0.left" timestamp="1602657261652">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="639" height="181" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602657261652" />
     <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
-    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1602656357542">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="639" height="181" key="GridCell.Tab.0.right" timestamp="1602657261653">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="639" height="181" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
     <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
