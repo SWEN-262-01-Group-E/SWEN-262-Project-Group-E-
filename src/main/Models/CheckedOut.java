@@ -12,13 +12,13 @@ import java.util.Calendar;
 
 public class CheckedOut {
 
-    private int ISBN;
-    private int VisitorID;
+    private Book book;
+    private long VisitorID;
     private Date CheckoutDate;
     private Date DueDate;
 
-    public CheckedOut(int ISBN, int VisitorID, Date CheckoutDate) {
-        this.ISBN = ISBN;
+    public CheckedOut(Book book, long VisitorID, Date CheckoutDate) {
+        this.book = book;
         this.VisitorID = VisitorID;
         this.CheckoutDate = CheckoutDate;
 
@@ -28,8 +28,8 @@ public class CheckedOut {
         DueDate = newDate.getTime();
     }
 
-    public int getISBN() {
-        return ISBN;
+    public Book getBook() {
+        return book;
     }
 
     public Date getDueDate(){

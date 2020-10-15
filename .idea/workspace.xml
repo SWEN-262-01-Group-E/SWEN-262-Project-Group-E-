@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52df58c-6d15-43cd-ae31-b3d8f6e0cf46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="3e43d73c-6222-40a2-a3ea-5deefb32a2bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Visitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="13" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Appl.LibraryServer" />
-      <module name="SWEN-262-Project-Group-E-" />
+      <module name="SWEN-262-Project-Group-E-1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Appl.*" />
@@ -109,14 +110,195 @@
       <option name="presentableId" value="Default" />
       <updated>1602651757313</updated>
     </task>
+    <task id="LOCAL-00011" summary="Trying to fix the nobody running things thing">
+      <created>1602479022547</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602479022547</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Trying to fix the nobody running things thing">
+      <created>1602479147380</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602479147380</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Trying to fix the nobody running things thing">
+      <created>1602479182042</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602479182042</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Preparing to merge back into Models branch">
+      <created>1602542125307</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602542125307</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Trying to fix the everything being broken thing">
+      <created>1602549670207</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602549670207</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Anthony Created the TimeManager">
+      <created>1602550354292</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602550354292</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed the BookParser and the commandline parsing. Starting on the Request-Response.">
+      <created>1602621551281</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1602621551281</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed a formatting error in the Library server">
+      <created>1602656385797</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602656385797</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added timekeeping functions and visit log files">
+      <created>1602726851946</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602726851946</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added name to README.md" />
+    <MESSAGE value="Added the beginings of the Visitor and Book model classes" />
+    <MESSAGE value="Added some comments I missed" />
+    <MESSAGE value="Added the ability to save all visitors and Books to a file upon shutdown, and read them back in on startup" />
+    <MESSAGE value="Added BookLog.bin and VisitorLog.bin to avoid first time crash" />
+    <MESSAGE value="Added Generic request model to facilitate organizing requests" />
+    <MESSAGE value="Trying to fix the nobody running things thing" />
+    <MESSAGE value="Preparing to merge back into Models branch" />
+    <MESSAGE value="Trying to fix the everything being broken thing" />
+    <MESSAGE value="Anthony Created the TimeManager" />
+    <MESSAGE value="Fixed the BookParser and the commandline parsing. Starting on the Request-Response." />
+    <MESSAGE value="Fixed a formatting error in the Library server" />
+    <MESSAGE value="Added timekeeping functions and visit log files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added timekeeping functions and visit log files" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1114" y="225" key="FileChooserDialogImpl" timestamp="1602732827334">
+    <state x="206" y="193" key="#LibraryServer" timestamp="1602735901584">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1114" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602732827334" />
-    <state x="1001" y="233" key="NewModule_or_Project.wizard" timestamp="1602732834185">
+    <state x="147" y="47" key="#LibraryServer/0.0.1366.728@0.0.1366.728" timestamp="1602657213982" />
+    <state x="206" y="193" key="#LibraryServer/0.0.1920.1040@0.0.1920.1040" timestamp="1602735901584" />
+    <state x="320" y="110" key="#Project_Structure" timestamp="1602480782920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="320" y="110" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1602480782920" />
+    <state x="128" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602723869007">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="128" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602723869007" />
+    <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602480806583" />
+    <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602726617705">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602726617705" />
+    <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
+    <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1602659095373">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602659095373" />
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602648884817" />
+    <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601858187209">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601858187209" />
+    <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602617784742">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1602617784742" />
+    <state x="317" y="28" width="692" height="796" key="CommitChangelistDialog2" timestamp="1602733362541">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="317" y="28" width="692" height="796" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602733362541" />
+    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657591791" />
+    <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
+    <state width="802" height="435" key="GridCell.Tab.0.bottom" timestamp="1602735920180">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="639" height="181" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
+    <state width="802" height="435" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
+    <state width="802" height="435" key="GridCell.Tab.0.center" timestamp="1602735920180">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="639" height="181" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602657261652" />
+    <state width="802" height="435" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
+    <state width="802" height="435" key="GridCell.Tab.0.left" timestamp="1602735920180">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="639" height="181" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602657261652" />
+    <state width="802" height="435" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
+    <state width="802" height="435" key="GridCell.Tab.0.right" timestamp="1602735920180">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="639" height="181" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
+    <state width="802" height="435" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
+    <state width="1493" height="262" key="GridCell.Tab.1.bottom" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state width="1493" height="262" key="GridCell.Tab.1.center" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state width="1493" height="262" key="GridCell.Tab.1.left" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state width="1493" height="262" key="GridCell.Tab.1.right" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="188" y="16" width="1714" height="1016" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602541838921" />
+    <state x="672" y="238" key="MultipleFileMergeDialog" timestamp="1602541838927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="238" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602541838927" />
+    <state x="1067" y="229" key="NewModule_or_Project.wizard" timestamp="1602480665216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1067" y="229" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602480665216" />
+    <state x="246" y="63" key="SettingsEditor" timestamp="1602480675128">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="246" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602480675128" />
+    <state x="442" y="204" key="Vcs.Push.Dialog.v2" timestamp="1602726856272">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="442" y="204" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602726856272" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602621553319" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602735885772">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602735885772" />
+    <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602648343056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1001" y="233" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602732834185" />
