@@ -18,7 +18,7 @@ public class RegisterRequest implements Request {
     private OwningLibrary proxyLibrary;
 
     //a counter to increment the Visitor's id every time a new one is created, ensuring that every ID is unique
-    private static Long nextVisitorID = Long.valueOf(1);
+    private static Long nextVisitorID = Long.valueOf(1000000000);
 
     private String firstName;
     private String lastName;
