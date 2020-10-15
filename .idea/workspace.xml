@@ -97,8 +97,10 @@
       </method>
     </configuration>
     <configuration name="LibraryServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Appl.LibraryServer" />
-      <module name="SWEN-262-Project-Group-E-1" />
+      <module name="SWEN-262-Project-Group-E-" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Appl.*" />
@@ -169,6 +171,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CSVBookParser" />
+      <item itemvalue="Application.LibraryServer" />
+      <item itemvalue="Application.Validator" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LibraryServer" />
@@ -343,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602656385797</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added timekeeping functions and visit log files">
+      <created>1602726851946</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602726851946</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +376,8 @@
     <MESSAGE value="Anthony Created the TimeManager" />
     <MESSAGE value="Fixed the BookParser and the commandline parsing. Starting on the Request-Response." />
     <MESSAGE value="Fixed a formatting error in the Library server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a formatting error in the Library server" />
+    <MESSAGE value="Added timekeeping functions and visit log files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added timekeeping functions and visit log files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="147" y="47" key="#LibraryServer" timestamp="1602657213982">
@@ -374,13 +389,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="320" y="110" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1602480782920" />
-    <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602480806583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="128" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602723869007">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="128" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602723869007" />
     <state x="160" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602480806583" />
-    <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602133606734">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602726617705">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602726617705" />
     <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
     <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1602659095373">
       <screen x="0" y="0" width="1366" height="728" />
@@ -395,9 +412,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1602617784742" />
-    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602657591791">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="317" y="28" width="692" height="796" key="CommitChangelistDialog2" timestamp="1602733362541">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="317" y="28" width="692" height="796" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602733362541" />
     <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657591791" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -423,6 +441,22 @@
     </state>
     <state width="639" height="181" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
     <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602656357542" />
+    <state width="1493" height="262" key="GridCell.Tab.1.bottom" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state width="1493" height="262" key="GridCell.Tab.1.center" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state width="1493" height="262" key="GridCell.Tab.1.left" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
+    <state width="1493" height="262" key="GridCell.Tab.1.right" timestamp="1602733311625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="262" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602733311625" />
     <state x="188" y="16" width="1714" height="1016" key="MergeDialog" timestamp="1602541838921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -439,9 +473,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="246" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602480675128" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1602621553319">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="442" y="204" key="Vcs.Push.Dialog.v2" timestamp="1602726856272">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="442" y="204" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602726856272" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602621553319" />
     <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602657541941">
       <screen x="0" y="0" width="1920" height="1040" />

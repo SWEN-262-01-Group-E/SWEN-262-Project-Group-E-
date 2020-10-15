@@ -1,6 +1,7 @@
 package main.Models;
 
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -72,6 +73,11 @@ public class TimeManager implements Serializable {
     {
         UpdateCalendar();
         return calendar.getTime();
+    }
+
+    public DateFormat getFormat()
+    {
+        return format;
     }
 
     /*

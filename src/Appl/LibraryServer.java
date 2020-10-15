@@ -7,9 +7,12 @@ import Resposes.RegisterResponse;
 import Resposes.Response;
 import main.Models.Book;
 import main.Models.OwningLibrary;
+import main.Models.TimeManager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.Time;
+import java.time.LocalTime;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,6 +24,8 @@ import java.util.Scanner;
 public class LibraryServer {
 
     private static OwningLibrary library;
+    private static TimeManager timeManager;
+
 
     public static final String BOOKSFILE = "TextFiles/Books.txt";
 
@@ -29,7 +34,8 @@ public class LibraryServer {
     public static void main(String[] args) {
 
         //opens the library
-        library = new OwningLibrary();
+        library = new OwningLibrary(LocalTime.of(8, 0, 0),
+                LocalTime.of(19, 0, 0));
 
         HashMap<Long, Book> allBooks = new HashMap<Long, Book>();
 

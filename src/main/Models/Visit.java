@@ -1,5 +1,6 @@
 package main.Models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -10,26 +11,33 @@ import java.util.Date;
 public class Visit {
 
     private int VisitorID;
-    private Date ArrivalTme;
-    private Date DepartureTime;
+    private Date ArrivalTime = null;
+    private Date DepartureTime = null;
 
     /**
-     * Creates a new visit object with the current date/time as the arrival time
+     * Creates a new visit object with the specified date/time as the arrival time
      * @param VisitorID the ID of the visitor
      */
-    public Visit(int VisitorID) {
-        // TODO add error checking for start time while library is open
+    public Visit(int VisitorID, Date arrivalTme) {
+
         this.VisitorID = VisitorID;
-        ArrivalTme = new Date();
+        ArrivalTime = arrivalTme;
     }
 
     /**
      * Updates the departure time to end the visit
      */
-    public void endVisit() {
-        DepartureTime = new Date();
+    public void endVisit(Date departureTime) {
+        DepartureTime = departureTime;
     }
 
-    //TODO add a function to close all open visits when the library closes, may be in APPL package
+    public boolean getIsOngoingVisit() {return DepartureTime == null; }
+    public int getVisitorID() {return VisitorID; }
 
+    public long getLengthOfVisit() {
+        if(DepartureTime != null)
+            return DepartureTime.getTime() - ArrivalTime.getTime();
+
+            return 0;
+    }
 }
