@@ -174,7 +174,7 @@
         <item itemvalue="Application.LibraryServer" />
         <item itemvalue="Application.Validator" />
         <item itemvalue="Application.CSVBookParser" />
-        <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.Validator" />
         <item itemvalue="Application.LibraryServer" />
       </list>
     </recent_temporary>
@@ -336,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602621551281</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed a formatting error in the Library server">
+      <created>1602656385797</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602656385797</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +361,8 @@
     <MESSAGE value="Trying to fix the everything being broken thing" />
     <MESSAGE value="Anthony Created the TimeManager" />
     <MESSAGE value="Fixed the BookParser and the commandline parsing. Starting on the Request-Response." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the BookParser and the commandline parsing. Starting on the Request-Response." />
+    <MESSAGE value="Fixed a formatting error in the Library server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a formatting error in the Library server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="147" y="47" key="#LibraryServer" timestamp="1602657213982">
@@ -387,10 +395,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1136" y="416" width="398" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1602617784742" />
-    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602655823902">
+    <state x="396" y="127" key="CommitChangelistDialog2" timestamp="1602657591791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602655823902" />
+    <state x="396" y="127" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657591791" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1602480657915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -435,10 +443,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602621553319" />
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655812371">
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602657541941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602655812371" />
+    <state x="645" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602657541941" />
     <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602648343056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

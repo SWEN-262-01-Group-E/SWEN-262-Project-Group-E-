@@ -1,5 +1,10 @@
 package Appl;
 
+import Requests.RegisterRequest;
+import Requests.Request;
+import Requests.RequestNames;
+import Resposes.RegisterResponse;
+import Resposes.Response;
 import main.Models.Book;
 import main.Models.OwningLibrary;
 
@@ -19,6 +24,8 @@ public class LibraryServer {
 
     public static final String BOOKSFILE = "TextFiles/Books.txt";
 
+    public static Boolean isRunning = true;
+
     public static void main(String[] args) {
 
         //opens the library
@@ -34,10 +41,9 @@ public class LibraryServer {
            System.out.println("Could dont Find Books file");
        }
 
-
         StringBuilder commandBuilder = new StringBuilder();
         Scanner commandScanner = new Scanner(System.in);
-        Boolean isRunning = true;
+
         do {
             do {
                 System.out.print("Enter commands >");
@@ -51,32 +57,17 @@ public class LibraryServer {
             for(String command : commandBuilder.toString().split(",")) {
 
                 String actualCommand = command.trim();
-
-                /*if(command.equals("quit")) {
-                    isRunning = false;
-                    break;
-                }*/
                 Parameters.add(actualCommand);
+
             }//end for loop
 
             if(Parameters.size() > 0) {
 
-                switch(Parameters.get(0)) {
-                    default:
-                        System.out.println("Invalid command, please try again");
-                        break;
-                    case "command":
-                        //Check arguments and call method method for that command
-                        //Example:
-                        /*
-                            if(arguments.size() == 3)
-                            command_method(arguments.get(1), arguments.get(2))
-                        */
-                        //Could also parse integers and check those
-                        break;
-                    }//end switch
-                }//end if-else
+                Response systemResponse = getSystemResponse(Parameters);
+                System.out.println("response >> " + systemResponse.getResponse());
+            }
 
+            commandBuilder = new StringBuilder();
         } while(isRunning);
 
         //Save Library
@@ -88,6 +79,31 @@ public class LibraryServer {
 
     }
 
+
+    private static Response getSystemResponse(ArrayList<String> parameters){
+        Request userRequest;
+        //todo: Need to change this to an actual default state
+        Response systemResponse = new RegisterResponse();
+
+        switch(parameters.get(0).toLowerCase().trim()) {
+            case "quit":
+                isRunning = false;
+                break;
+            case "register":
+                System.out.println(parameters.size());
+                if(parameters.size() == 5) {
+                    userRequest = new RegisterRequest(parameters.get(1), parameters.get(2), parameters.get(3),
+                                                        parameters.get(4), library);
+                    systemResponse = userRequest.performRequest();
+                }
+                break;
+            default:
+                System.out.println("Invalid command, please try again");
+                break;
+        }//end switch
+
+        return systemResponse;
+    }
 
     private static ArrayList<String> splitCSV(String masterString) {
         ArrayList<String> arguments = new ArrayList<String>();
