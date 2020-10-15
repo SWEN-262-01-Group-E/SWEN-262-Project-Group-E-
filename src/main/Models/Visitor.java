@@ -24,7 +24,7 @@ public class Visitor implements Serializable {
     private String address;
     private String phoneNumber;
     private long ID;
-    private ArrayList<Book> booksCheckedOut;  //this structure means that the first copy of a
+    private ArrayList<CheckedOut> booksCheckedOut;  //this structure means that the first copy of a
     private double totalFines;   //TODO this can probably be removed and replaced with a class that calculates the value
 
     /**
@@ -42,25 +42,6 @@ public class Visitor implements Serializable {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.ID = ID;
-    }
-
-    /**
-     * A constructor to create a new Visitor, using the first name, last name, address, phone number, ID, and list of books Checked out
-     *
-     * @param firstName  The first name of the visitor
-     * @param lastName  The last name of the visitor
-     * @param address  The address of the visitor
-     * @param phoneNumber  The phone number of the visitor
-     * @param ID  The unique ID number of the visitor
-     * @param booksCheckedOut A list of books currently checked out by the visitor, organized by the book's ISBN
-     */
-    public Visitor(String firstName, String lastName, String address, String phoneNumber, long ID, ArrayList<Book> booksCheckedOut) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.ID = ID;
-        this.booksCheckedOut = booksCheckedOut;
     }
 
     /**
@@ -138,6 +119,14 @@ public class Visitor implements Serializable {
     //there is no "set" method for the ID because it should never change.
 
     /**
+     * returns the total fines owed by this visitor
+     * @return a double value representing the total fines owed
+     */
+    public double getTotalFines(){
+        return totalFines;
+    }
+
+    /**
      * adds a book to the list of books the visitor currently has checked out
      * @param book the book being checked out
      * @return if the book was successfully added to the list of books checked out.
@@ -146,7 +135,7 @@ public class Visitor implements Serializable {
     {
         checkOutState stateCheckOut = new checkOutState();
         if(this.booksCheckedOut.size() < 5) {
-            this.booksCheckedOut.add(book);
+            this.booksCheckedOut.add(new CheckedOut(book, ID, new Date()));
             ableToCheckOut ableTo = new ableToCheckOut();
             return ableTo.canCheckOut(stateCheckOut);
         } else {
@@ -188,6 +177,7 @@ public class Visitor implements Serializable {
         return cost;
 
     }
+
 
     /**
      * A method used to compare visitors to each other by first and last name, address, and phone nubmber
