@@ -10,6 +10,7 @@ import main.Models.StrategyCostCalc.*;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -110,6 +111,18 @@ public class Visitor implements Serializable {
     }
 
     /**
+     * creates a list of all of the books currently borrowed by the visitor
+     * @return an Arraylist of all books currently borrowed by this visitor
+     */
+    public List<Book> getBooksBorrowed(){
+        ArrayList<Book> allBooks = new ArrayList<Book>();
+        for(CheckedOut b : this.booksCheckedOut){
+            allBooks.add(b.getBook());
+        }
+        return allBooks;
+    }
+
+    /**
      * returns the unique ID number of the visitor
      * @return the unique ID number of the visitor
      */
@@ -119,6 +132,24 @@ public class Visitor implements Serializable {
 
     //there is no "set" method for the ID because it should never change.
 
+    //todo, this needs to be expanded to work with multiple books
+    public boolean canCheckOutBook(){
+        if(this.booksCheckedOut.size() >= 5){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * checks if the visitor owes a fine
+     * @return if the visitor owes a fine
+     */
+    public boolean owesFine(){
+        if(this.totalFines > 0){
+            return true;
+        }
+        return false;
+    }
     /**
      * returns the total fines owed by this visitor
      * @return a double value representing the total fines owed

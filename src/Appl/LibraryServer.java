@@ -1,6 +1,7 @@
 package Appl;
 
 import Requests.*;
+import Resposes.BuyResponse;
 import Resposes.RegisterResponse;
 import Resposes.Response;
 import main.Models.Book;
@@ -23,6 +24,7 @@ public class LibraryServer {
 
     private static OwningLibrary library;
     private static TimeManager timeManager;
+    private static HashMap<Long, Book> bookStore;
 
 
     public static final String BOOKSFILE = "TextFiles/Books.txt";
@@ -35,12 +37,12 @@ public class LibraryServer {
         library = new OwningLibrary(LocalTime.of(8, 0, 0),
                 LocalTime.of(19, 0, 0));
 
-        HashMap<Long, Book> allBooks = new HashMap<Long, Book>();
+        bookStore = new HashMap<Long, Book>();
 
       // Scanner reader = new Scanner(new File(BOOKSFILE))
 
        try{
-           allBooks = CSVBookParser.CreateBooks(new File(BOOKSFILE));
+           bookStore = CSVBookParser.CreateBooks(new File(BOOKSFILE));
        }catch (FileNotFoundException f){
            System.out.println("Could dont Find Books file");
        }
@@ -112,6 +114,15 @@ public class LibraryServer {
                     systemResponse = userRequest.performRequest();
                 }
                 break;
+            case "buy":
+                //todo this needs to become a request/response, and checking needs to happen
+                if(parameters.size() == 3){
+                    if(bookStore.containsKey(parameters.get(2))){
+                        library.addBook(bookStore.get(parameters.get(2)), Integer.parseInt(parameters.get(1)));
+                        systemResponse = new BuyResponse("BUY, " + parameters.get(2) + ", " + parameters.get(1));
+                    }
+                }
+                systemResponse = new BuyResponse("invalid ISBN");
 
             default:
                 System.out.println("Invalid command, please try again");

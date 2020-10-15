@@ -1,8 +1,9 @@
 package main.Models;
 
+import Resposes.RegisterResponse;
+
 import java.io.*;
 
-import java.sql.Time;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,9 +38,9 @@ public class OwningLibrary {
         openLibrary();
     }
 
-    public void addBook(Book book, int copies) {
+    public LibraryEntry addBook(Book book, int copies) {
         LibraryEntry entry = new LibraryEntry(book, copies);
-        Inventory.put(book.getISBN(), entry);
+        return Inventory.put(book.getISBN(), entry);
     }
 
     public void addVisitor(Visitor visitor) {
@@ -115,6 +116,14 @@ public class OwningLibrary {
         return null;
     }
 
+    public boolean containsBook(String ISBN){
+        return this.Inventory.containsKey(ISBN);
+    }
+
+    public boolean borrowBook(long VisitorID, String ISBN){
+        Inventory.get(ISBN).checkoutBook();
+        return Register.get(VisitorID).addCheckedOutBook(Inventory.get(ISBN).getBook());
+    }
 
     /**
      * loads the visitors and Books from an external file
