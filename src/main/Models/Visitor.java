@@ -42,6 +42,7 @@ public class Visitor implements Serializable {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.ID = ID;
+        booksCheckedOut = new ArrayList<CheckedOut>();
     }
 
     /**
@@ -134,6 +135,7 @@ public class Visitor implements Serializable {
     public Boolean addCheckedOutBook(Book book)
     {
         checkOutState stateCheckOut = new checkOutState();
+
         if(this.booksCheckedOut.size() < 5) {
             this.booksCheckedOut.add(new CheckedOut(book, ID, new Date()));
             ableToCheckOut ableTo = new ableToCheckOut();

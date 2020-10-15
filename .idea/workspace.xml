@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e43d73c-6222-40a2-a3ea-5deefb32a2bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Requests/ArriveRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Resposes/ArrivalResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appl/LibraryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appl/LibraryServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requests/RegisterRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/OwningLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/TimeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/TimeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Models/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Visit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Models/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Models/Visitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +17,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Documents" />
+        <entry key="$PROJECT_DIR$" value="RequestResponse2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,15 +85,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Visit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Models.Visit" />
+      <module name="SWEN-262-Project-Group-E-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.CSVBookParser" />
       <item itemvalue="Application.LibraryServer" />
       <item itemvalue="Application.Validator" />
+      <item itemvalue="Application.Visit" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Validator" />
         <item itemvalue="Application.LibraryServer" />
+        <item itemvalue="Application.Visit" />
+        <item itemvalue="Application.Validator" />
         <item itemvalue="Application.CSVBookParser" />
       </list>
     </recent_temporary>
@@ -215,11 +241,11 @@
     </state>
     <state x="966" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602726617705" />
     <state x="1208" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602133606734" />
-    <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1602659095373">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1602752991915">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="886" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602659095373" />
-    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602648884817" />
+    <state x="1245" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602752991915" />
     <state x="1291" y="416" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601858187209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -237,26 +263,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602480657915" />
-    <state width="802" height="435" key="GridCell.Tab.0.bottom" timestamp="1602735920180">
+    <state width="1160" height="238" key="GridCell.Tab.0.bottom" timestamp="1602753710322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="639" height="181" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
-    <state width="802" height="435" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
-    <state width="802" height="435" key="GridCell.Tab.0.center" timestamp="1602735920180">
+    <state width="1160" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602753710322" />
+    <state width="1160" height="238" key="GridCell.Tab.0.center" timestamp="1602753710322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="639" height="181" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602657261652" />
-    <state width="802" height="435" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
-    <state width="802" height="435" key="GridCell.Tab.0.left" timestamp="1602735920180">
+    <state width="1160" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602753710322" />
+    <state width="1160" height="238" key="GridCell.Tab.0.left" timestamp="1602753710322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="639" height="181" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602657261652" />
-    <state width="802" height="435" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
-    <state width="802" height="435" key="GridCell.Tab.0.right" timestamp="1602735920180">
+    <state width="1160" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602753710322" />
+    <state width="1160" height="238" key="GridCell.Tab.0.right" timestamp="1602753710322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="639" height="181" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602657261653" />
-    <state width="802" height="435" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602735920180" />
+    <state width="1160" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602753710322" />
     <state width="1493" height="262" key="GridCell.Tab.1.bottom" timestamp="1602733311625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -284,11 +310,11 @@
     <state x="1067" y="229" key="NewModule_or_Project.wizard" timestamp="1602480665216">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1067" y="229" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602480665216" />
-    <state x="246" y="63" key="SettingsEditor" timestamp="1602480675128">
+    <state x="1001" y="233" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602732834185" />
+    <state x="814" y="106" key="SettingsEditor" timestamp="1602732847620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="246" y="63" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602480675128" />
+    <state x="814" y="106" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602732847620" />
     <state x="442" y="204" key="Vcs.Push.Dialog.v2" timestamp="1602726856272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -301,11 +327,6 @@
     <state x="191" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1602648343056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1001" y="233" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602732834185" />
-    <state x="814" y="106" key="SettingsEditor" timestamp="1602732847620">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="814" y="106" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602732847620" />
     <state x="685" y="155" key="new project wizard" timestamp="1602732824052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -85,12 +85,12 @@ public class OwningLibrary {
      * Starts the visit of a registered visitor
      *
      * @param visitorID the visitor checking out the book, assuming they are not checked in
-     * @return the Visit object representing the status of their visit
+     * @return the Visit object representing the status of their visit, null if the visitor is already visiting
      */
-    public Visit startVisit(int visitorID) {
+    public Visit startVisit(long visitorID) {
         //Checks to make sure they aren't already checked in (visitors can check in multiple times per day)
         for (Visit v : Visits) {
-            if (v.getVisitorID() == visitorID && v.getIsOngoingVisit()) return v;
+            if (v.getVisitorID() == visitorID && v.getIsOngoingVisit()) return null;
         }
 
         Visit v = new Visit(visitorID, time.getDate());

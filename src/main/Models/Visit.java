@@ -10,15 +10,16 @@ import java.util.Date;
  */
 public class Visit {
 
-    private int VisitorID;
+    private long VisitorID;
     private Date ArrivalTime = null;
     private Date DepartureTime = null;
 
     /**
      * Creates a new visit object with the specified date/time as the arrival time
+     *
      * @param VisitorID the ID of the visitor
      */
-    public Visit(int VisitorID, Date arrivalTme) {
+    public Visit(long VisitorID, Date arrivalTme) {
 
         this.VisitorID = VisitorID;
         ArrivalTime = arrivalTme;
@@ -31,13 +32,40 @@ public class Visit {
         DepartureTime = departureTime;
     }
 
-    public boolean getIsOngoingVisit() {return DepartureTime == null; }
-    public int getVisitorID() {return VisitorID; }
+    public boolean getIsOngoingVisit() {
+        return DepartureTime == null;
+    }
+
+    public long getVisitorID() {
+        return VisitorID;
+    }
+
+    public Date getArrivalTime() {
+        return ArrivalTime;
+    }
 
     public long getLengthOfVisit() {
-        if(DepartureTime != null)
+        if (DepartureTime != null)
             return DepartureTime.getTime() - ArrivalTime.getTime();
 
-            return 0;
+        return 0;
     }
+
+    /**
+     * returns the length of an ongoing visit
+     *
+     * @param now the current time and date
+     * @return the time difference between the current time and the start time of the visit
+     */
+    public Long getCurrentLengthOfVisit(Date now) {
+        return now.getTime() - ArrivalTime.getTime();
+    }
+
+    @Override
+    public String toString() {
+        return "VisitorID=" + VisitorID +
+                ", ArrivalTime=" + ArrivalTime +
+                '}';
+    }
+
 }

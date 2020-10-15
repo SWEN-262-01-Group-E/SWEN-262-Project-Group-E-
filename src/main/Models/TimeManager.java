@@ -27,6 +27,7 @@ public class TimeManager implements Serializable {
         lastUpdatedTime = System.currentTimeMillis();
     }
 
+
     public TimeManager(String date, String time)
     {
         format = new SimpleDateFormat("yyyy-MM-dd");

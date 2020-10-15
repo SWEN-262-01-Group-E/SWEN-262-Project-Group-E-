@@ -1,5 +1,6 @@
 package Appl;
 
+import Requests.ArriveRequest;
 import Requests.RegisterRequest;
 import Requests.Request;
 import Requests.RequestNames;
@@ -96,13 +97,18 @@ public class LibraryServer {
                 isRunning = false;
                 break;
             case "register":
-                System.out.println(parameters.size());
                 if(parameters.size() == 5) {
-                    userRequest = new RegisterRequest(parameters.get(1), parameters.get(2), parameters.get(3),
-                                                        parameters.get(4), library);
+                    userRequest = new RegisterRequest(library,parameters);
                     systemResponse = userRequest.performRequest();
                 }
                 break;
+            case "arrive":
+                if(parameters.size() == 2)
+                {
+                    userRequest = new ArriveRequest(library, parameters);
+                    systemResponse = userRequest.performRequest();
+                }
+
             default:
                 System.out.println("Invalid command, please try again");
                 break;
