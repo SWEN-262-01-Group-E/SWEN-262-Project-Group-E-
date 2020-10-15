@@ -13,7 +13,7 @@ public class ArrivalResponse implements Response {
      * @param invalidID : the invalid ID
      */
     public ArrivalResponse(String invalidID){
-        responseMessage = invalidID;
+        responseMessage = "invalid ID: " + invalidID;
     }
 
     /**
@@ -28,7 +28,7 @@ public class ArrivalResponse implements Response {
      * @param newVisit the new visit started
      */
     public ArrivalResponse(Visit newVisit){
-        responseMessage = "invalid ID: " + newVisit.toString();
+        responseMessage = newVisit.toString();
     }
 
     @Override

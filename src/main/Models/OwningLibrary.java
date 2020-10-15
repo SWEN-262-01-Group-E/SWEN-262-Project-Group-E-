@@ -104,13 +104,15 @@ public class OwningLibrary {
      *
      * @param visitorID the visitor visiting the library
      */
-    public void endVisit(int visitorID) {
+    public Visit endVisit(long visitorID) {
         for (Visit v : Visits) {
             if (v.getVisitorID() == visitorID && v.getIsOngoingVisit()) {
                 v.endVisit(time.getDate());
-                return;
+                return v;
             }
         }
+
+        return null;
     }
 
 

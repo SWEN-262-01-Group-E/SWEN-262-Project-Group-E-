@@ -1,9 +1,6 @@
 package Appl;
 
-import Requests.ArriveRequest;
-import Requests.RegisterRequest;
-import Requests.Request;
-import Requests.RequestNames;
+import Requests.*;
 import Resposes.RegisterResponse;
 import Resposes.Response;
 import main.Models.Book;
@@ -108,6 +105,13 @@ public class LibraryServer {
                     userRequest = new ArriveRequest(library, parameters);
                     systemResponse = userRequest.performRequest();
                 }
+                break;
+            case "depart":
+                if(parameters.size()==2){
+                    userRequest = new EndVisitRequest(library, parameters);
+                    systemResponse = userRequest.performRequest();
+                }
+                break;
 
             default:
                 System.out.println("Invalid command, please try again");
