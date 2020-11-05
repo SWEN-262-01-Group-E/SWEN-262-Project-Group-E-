@@ -4,10 +4,7 @@ import java.io.*;
 
 import java.sql.Time;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * A model that represents a library using the LMS.
@@ -324,6 +321,12 @@ public class OwningLibrary {
             System.out.println("Error initializing stream");
         }
     }
+
+    public Date getDate() {
+        return time.getDate();
+    }
+
+
 /*
     private void writeReport(int month, int year)
     {

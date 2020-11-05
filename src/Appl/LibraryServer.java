@@ -98,8 +98,7 @@ public class LibraryServer {
             case "register":
                 System.out.println(parameters.size());
                 if(parameters.size() == 5) {
-                    userRequest = new RegisterRequest(parameters.get(1), parameters.get(2), parameters.get(3),
-                                                        parameters.get(4), library);
+                    userRequest = new RegisterRequest(library, parameters);
                     systemResponse = userRequest.performRequest();
                 }
                 break;

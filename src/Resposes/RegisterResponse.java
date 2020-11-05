@@ -36,7 +36,7 @@ public class RegisterResponse implements Response {
 
     @Override
     public RequestNames.RequestName getCommand() {
-        return this.getCommand();
+        return RESPONSE_NAME;
     }
 
     @Override

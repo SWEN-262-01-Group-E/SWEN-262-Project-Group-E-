@@ -96,6 +96,22 @@ public class Book implements Serializable {
     }
 
     /**
+     * returns the title of the book in the database
+     * @return the title of the book in the database
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * returns the authors of the book in the database
+     * @return the authors of the book in the database
+     */
+    public String getAuthors() {
+        return authors;
+    }
+
+    /**
      * Adds a specified number of copies of this book.
      * @param numberOfNewCopies the number of books to be added. Any numbers below zero are treated as zero
      * @return the new total number of copies
